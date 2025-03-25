@@ -93,16 +93,18 @@ a:hover {
 
 /* Image Section Placeholder */
 .image-section {
-    height: 300px;
-    background-color: #ffffff;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically (if there's enough height) */
+    max-width: 100%; /* Prevents overflowing */
+    padding: 20px;
 }
 
 .image-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+    max-width: 500.50vw; /* Adjust this to match the desired width */
+    max-height: 500.50vh; /* Adjust this to match the desired height */
+    width: auto; /* Maintains aspect ratio */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Optional: adds rounded corners */
 }
+
