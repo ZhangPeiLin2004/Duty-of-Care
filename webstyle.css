@@ -94,6 +94,22 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* Image Section Placeholder */
+.image-section {
+    height: 300px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 .flip-box {
   background-color: transparent;
   width: 300px;
@@ -133,18 +149,3 @@ a:hover {
   color: white;
   transform: rotateY(180deg);
     
-/* Image Section Placeholder */
-.image-section {
-    height: 300px;
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-}
-
-.image-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
