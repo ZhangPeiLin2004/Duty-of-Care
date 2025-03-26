@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Company Network</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: #c3f0a0;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            gap: 10px;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .home-button {
+            background: white;
+            color: black;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+        }
+        .home-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+        .container {
+            display: flex;
+            margin-top: 60px;
+        }
+        .sidebar {
+            width: 20%;
+            background-color: #d0f0c0;
+            height: 100vh;
+            padding: 20px;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            position: relative;
+        }
+        .search-container {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .search-bar {
+            width: 200px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        .map {
+            position: relative;
+            background-color: #fefaf0;
+            height: 500px;
+            width: 100%;
+            border: 2px solid black;
+        }
+        .house {
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            position: absolute;
+        }
+        .cta {
+            position: absolute;
+            right: 10%;
+            top: 20%;
+            background: green;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <button class="home-button button">
+            <img src="images/home-icon.png" alt="Home"> Home
+        </button>
+        <div class="nav-buttons">
+            <button class="button">Discussion</button>
+            <button class="button">Important Information</button>
+            <button class="button">Our Mission</button>
+            <button class="button">Sign Up</button>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <button class="button" style="width: 100%;">Sign Up</button>
+            <h3>Relevant Case Studies</h3>
+            <ul>
+                <li>---</li>
+                <li>---</li>
+                <li>---</li>
+            </ul>
+            <button class="button" style="background: white; color: black; border: 1px solid black;">How does it work?</button>
+        </div>
+        
+        <div class="content">
+            <div class="search-container">
+                <input class="search-bar" type="text" placeholder="Search">
+            </div>
+            <div class="map">
+                <div class="cta">Add Your Company, Make it Bluer</div>
+                <div class="house" style="top: 50px; left: 100px;"></div>
+                <div class="house" style="top: 100px; left: 200px;"></div>
+                <div class="house" style="top: 150px; left: 250px;"></div>
+                <div class="house" style="top: 200px; left: 150px;"></div>
+                <div class="house" style="top: 250px; left: 300px;"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

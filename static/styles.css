@@ -1,0 +1,40 @@
+body {
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("../static/Earth_background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.8; /* Adjust transparency */
+}
+
+header {
+    background-color: #2c6e49;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #2c6e49;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

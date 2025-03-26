@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Company Network</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #c3f0a0;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        .navbar button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .sidebar {
+            width: 20%;
+            background-color: #d0f0c0;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 50px;
+            padding: 20px;
+        }
+        .content {
+            margin-left: 20%;
+            padding: 80px 20px;
+        }
+        .map {
+            position: relative;
+            background-color: #fefaf0;
+            height: 500px;
+            width: 100%;
+            border: 2px solid black;
+        }
+        .house {
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            position: absolute;
+        }
+        .search-bar {
+            width: 200px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        .cta {
+            position: absolute;
+            right: 10%;
+            top: 20%;
+            background: green;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <button>Discussion</button>
+        <button>Important Information</button>
+        <button>Our Mission</button>
+        <button>Sign Up</button>
+    </div>
+    
+    <div class="sidebar">
+        <button style="width: 100%; padding: 10px;">Sign Up</button>
+        <h3>Relevant Case Studies</h3>
+        <ul>
+            <li>---</li>
+            <li>---</li>
+            <li>---</li>
+        </ul>
+        <button style="background: white; padding: 5px; border: 1px solid black;">How does it work?</button>
+    </div>
+    
+    <div class="content">
+        <input class="search-bar" type="text" placeholder="Search">
+        <div class="map">
+            <div class="cta">Add Your Company, Make it Bluer</div>
+            <div class="house" style="top: 50px; left: 100px;"></div>
+            <div class="house" style="top: 100px; left: 200px;"></div>
+            <div class="house" style="top: 150px; left: 250px;"></div>
+            <div class="house" style="top: 200px; left: 150px;"></div>
+            <div class="house" style="top: 250px; left: 300px;"></div>
+        </div>
+    </div>
+</body>
+</html>
