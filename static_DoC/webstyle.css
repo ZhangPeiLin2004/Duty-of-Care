@@ -9,7 +9,7 @@ body {
 
 /* Header and Navigation */
 header {
-    background-color: #007f5f; /* Rich green for header */
+    background: linear-gradient(to right, #1E4500, #38b000); /* Changing green for header */
     padding: 20px;
     display: flex;
     align-items: center;
