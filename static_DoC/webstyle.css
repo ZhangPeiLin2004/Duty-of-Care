@@ -1,15 +1,16 @@
-/* General Styles */
 body {
     background-color: #caf0f8;
+    font-family: "Lucida Console", "Courier New", monospace;
     color: #000000;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Header and Navigation */
+
 header {
-    background: linear-gradient(to right, #1E4500, #38b000); /* Changing green for header */
+    background-color: #007f5f;
+    font-family: "Lucida Console", "Courier New", monospace;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -64,7 +65,7 @@ h1 {
 
 h2 {
     color: #0077B6;
-    font-family: "Lucida Console", "Courier New", monospace;
+    font-family: "Lucida Console", "Courier New", monospac  e;
     font-size: 1.5em;
 }
 
@@ -95,18 +96,111 @@ a:hover {
 
 /* Image Section Placeholder */
 .image-section {
+    height: 300px;
+    background-color: #ffffff;
     display: flex;
-    justify-content: center; /* Centers the image horizontally */
-    align-items: center; /* Centers the image vertically (if there's enough height) */
-    max-width: 100%; /* Prevents overflowing */
-    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    overflow: hidden;  
 }
 
 .image-section img {
-    max-width: 500.50vw; /* Adjust this to match the desired width */
-    max-height: 500.50vh; /* Adjust this to match the desired height */
-    width: auto; /* Maintains aspect ratio */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 10px; /* Optional: adds rounded corners */
+    max-width: 100%;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+}
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
 }
 
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+    
+
+
+/* Solutions page (still considering the size of pic) */
+.solution-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+    width: 85%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.description-box {
+    width: 50%;
+    line-height: 1.8;
+    font-size: 1.2rem;
+}
+
+.toolbox-btn {
+    display: inline-block;
+    background-color: #26a69a;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.toolbox-btn:hover {
+    background-color: #00796b;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,121,107,0.4);
+}
+
+.image-box {
+    width: 45%;
+}
+
+.image-box img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.4s ease;
+}
+
+.image-box img:hover {
+    transform: scale(1.05);
+}
