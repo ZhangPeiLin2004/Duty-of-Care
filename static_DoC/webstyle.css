@@ -58,11 +58,13 @@ nav {
 /* Titles and Headings */
 h1 {
     color: #03045E;
+    font-family: "Lucida Console", "Courier New", monospace;
     font-size: 2em;
 }
 
 h2 {
     color: #0077B6;
+    font-family: "Lucida Console", "Courier New", monospace;
     font-size: 1.5em;
 }
 
