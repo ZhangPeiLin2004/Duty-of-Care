@@ -78,3 +78,30 @@
 </html>
 <!-- solutions toolbox-->
 <!-- ############################################################################################################### -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='webstyle.css') }}">
+    <title>Looking for Solutions?</title>
+</head>
+<body>
+    <header>
+        <h1>Looking for Solutions?</h1>
+    </header>
+
+    <section class="solution-content">
+        <div class="description-box">
+            <p>
+                Description (still considering)
+            </p>
+            <a class="toolbox-btn" href="/toolbox">TOOLBOX</a>
+        </div>
+
+        <div class="image-box">
+            <img src="{{ url_for('static', filename='static_DoC/!Picture!.jpg') }}" alt="Clean Environment">
+        </div>
+    </section>
+</body>
+</html>
