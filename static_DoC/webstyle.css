@@ -9,7 +9,7 @@ body {
 
 
 header {
-    background-color: #007f5f;
+    background-color: #07b488;
     font-family: "Lucida Console", "Courier New", monospace;
     padding: 20px;
     display: flex;
@@ -30,7 +30,7 @@ nav {
 }
 
 .nav-item {
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     cursor: pointer;
     padding: 10px;
@@ -39,7 +39,7 @@ nav {
 }
 
 .nav-item:hover {
-    background-color: #38b000;
+    background-color: #60e224;
 }
 
 .search-icon {
@@ -96,7 +96,7 @@ a:hover {
 
 /* Image Section Placeholder */
 .image-section {
-    height: 300px;
+    height: 600px;
     background-color: #ffffff;
     display: flex;
     align-items: center;
