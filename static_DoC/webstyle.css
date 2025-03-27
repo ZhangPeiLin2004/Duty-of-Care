@@ -152,59 +152,7 @@ a:hover {
   color: white;
   transform: rotateY(180deg);
 }
-    
 
-
-/* Solutions page (still considering the size of pic) */
-.solution-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 50px auto;
-    width: 85%;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 15px;
-    padding: 30px;
-}
-
-.description-box {
-    width: 50%;
-    line-height: 1.8;
-    font-size: 1.2rem;
-}
-
-.toolbox-btn {
-    display: inline-block;
-    background-color: #26a69a;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 25px;
-    text-decoration: none;
-    margin-top: 15px;
-    transition: all 0.3s ease;
-    font-weight: bold;
-}
-
-.toolbox-btn:hover {
-    background-color: #00796b;
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0,121,107,0.4);
-}
-
-.image-box {
-    width: 45%;
-}
-
-.image-box img {
-    width: 100%;
-    border-radius: 15px;
-    transition: transform 0.4s ease;
-}
-
-.image-box img:hover {
-    transform: scale(1.05);
-}
 
 /*#############################################################################################*/
 /* RELAVANT STORIES */
