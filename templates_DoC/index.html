@@ -10,7 +10,7 @@
     <header>
         <div class="logo">Your Logo Here</div>
         <nav>
-            <div class="nav-item">Duty of care</div>
+            <div class="nav-item"><a href="#quote-section">Duty of care</a></div>
             <div class="nav-item">Toolbox</div>
             <div class="nav-item"><a href="#relevant-stories">Relevant stories</a></div>
             <div class="nav-item">About us</div>
@@ -20,9 +20,9 @@
     </header>
     <div class="hero-section">
         <section class="image-section">
-            <img src="../images_DoC/freshwater_glass.png" alt="Glass of Water">
+            <img src="../images_DoC/glass-water.png" alt="Glass of Water">
             <div class="slogan">
-                <h1>Safer Tomorrow Starts Today</h1>
+                <h1 class="slogan">Safer Tomorrow Starts Today</h1>
                 <h1>Be PFAS-Free!</h1>
             </div>
         </section>
@@ -88,16 +88,25 @@
 </section>
 <!-- Relevant Stories-->
 <!-- ############################################################################################################### -->
-
-
- <script src="../static_DoC/script.js"></script>
-    <footer>
-        <div class="footer-item">Contact us</div>
-        <div class="footer-item">Privacy Policy</div>
-        <div class="footer-item">Terms of Service</div>
-    </footer>      
-</body>
-</html>
+     <!-- ################################ Our Recognition Section ################################ -->
+     <section class="section">
+        <div class="section-content">
+            <h1>Our Recognition: The PFAS Pioneer Stamp</h1>
+            <p>Showcase your commitment to responsible PFAS management with our prestigious "PFAS Pioneer" stamp.</p>
+            <p>We recognize and celebrate those organizations leading the charge in minimizing PFAS impact and fostering a safer future. Our three tiers of achievement:</p>
+            <ul>
+                <li><b>Engaged Contributor:</b> Signifies your active participation in PFAS awareness and initial implementation of responsible practices.</li>
+                <li><b>Significant Advancement:</b> Honors those demonstrating substantial progress in reducing PFAS presence or impact within their operations.</li>
+                <li><b>Exemplary Leader:</b> Reserved for organizations setting the benchmark in comprehensive PFAS mitigation and establishing industry-leading best practices.</li>
+            </ul>
+            <a href="stamp.html"><button>Read More</button></a>
+        </div>
+        <div class="section-image">
+            <img src="../images_DoC/stamp_1.png" alt="Image 1">
+            <img src="../images_DoC/stamp_2.png" alt="Image 2">
+            <img src="../images_DoC/stamp_3.png" alt="Image 3">
+        </div>
+    </section>
 <!-- solutions toolbox-->
 <!-- ############################################################################################################### -->
 <!DOCTYPE html>
@@ -124,5 +133,14 @@
             <img src="{{ url_for('static', filename='static_DoC/TboxPicture.jpg') }}" alt="Clean Environment">
         </div>
     </section>
+</body>
+</html>
+
+<script src="../static_DoC/script.js"></script>
+    <footer>
+        <div class="footer-item">Contact us</div>
+        <div class="footer-item">Privacy Policy</div>
+        <div class="footer-item">Terms of Service</div>
+    </footer>   
 </body>
 </html>

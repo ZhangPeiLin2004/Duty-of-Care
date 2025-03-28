@@ -123,24 +123,34 @@ a:hover {
     object-fit: contain;
 }
 
-/* Slogan overlay */
+
+/* Slogan Overlay */
 .slogan {
-    position: absolute;
-    top: 20px; /* Adjusts vertical position */
-    left: 50%;
-    transform: translateX(-50%); /* Centers horizontally */
-    color: white !important; /* Ensures text is visible */
-    text-align: center;
-    font-size: 1.5em;
+    font-family: 'Montserrat';
+    font-size: 3rem; /* Adjust size as needed */
     font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #0077b6, #00a8e8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Remove full viewport height */
+    padding: 20px;
 }
 
-.slogan h1 {
-    font-size: 3rem;
-    margin: 0;
-    line-height: 1.2;
-    color: white !important; /* Force white text */
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
+
 
 /* Flipbox */
 .flip-box {
