@@ -11,7 +11,7 @@ html, body {
     overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
-* {
+*{
     box-sizing: border-box;
 }
 
@@ -63,10 +63,7 @@ nav ul li a {
 }
 
 
-main {
-    padding: 2rem 5%;
-    position: relative;
-  }
+
   
   /* Fixed content box */
   .contents-box {
@@ -96,6 +93,9 @@ main {
   }
   
   .section {
+
+    padding: 2rem 5%;
+    position: relative;
     margin: 60px 0;
     color: #274C77;
   }
@@ -106,18 +106,20 @@ main {
   
   .overview {
     background-color: #e6e5ec;
-    padding: 1rem;
-    margin: 2rem 0;
+    padding: 2rem 5%;
+    margin: 2rem 0
+
   }
   
-  .full-image {
+.full-image {
     height: 300px;
+    width: 100vw; /* Ensures the image spans the full width of the viewport */
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     padding-left: 5%;
-  }
+}
   
   .full-image h1,
   .full-image h2 {
