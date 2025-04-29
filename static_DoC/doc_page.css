@@ -63,7 +63,89 @@ nav ul li a {
 }
 
 
-
+main {
+    padding: 2rem 5%;
+    position: relative;
+  }
+  
+  /* Fixed content box */
+  .contents-box {
+    position: fixed;
+    top: 150px;
+    right: 20px;
+    width: 250;
+    background-color: #e6e5ec;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    z-index: 900;
+  }
+  
+  .contents-box h3 {
+    color: #274C77;
+    margin-top: 0;
+  }
+  
+  .contents-box a {
+    text-decoration: none;
+    color: #274C77;
+  }
+  
+  .contents-box a:hover {
+    text-decoration: underline;
+  }
+  
+  .section {
+    margin: 60px 0;
+    color: #274C77;
+  }
+  
+  .section h2 {
+    color: #274C77;
+  }
+  
+  .overview {
+    background-color: #e6e5ec;
+    padding: 1rem;
+    margin: 2rem 0;
+  }
+  
+  .full-image {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+  }
+  
+  .full-image h1,
+  .full-image h2 {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 2em;
+    color: #274C77;
+  }
+  
+  /* Badge and certification */
+  .badge-section {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .badge {
+    background-color: #E7CEFF;
+    padding: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #274C77;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 150px;
+  }
 
 
 /*#############################################################################################*/
