@@ -76,14 +76,15 @@ nav ul li a {
 }
 
 .category {
-    max-width: 320px;
+    max-width: 650px;
     text-align: center;
+    padding: 60px;
 }
 
 .category h2 {
     font-size: 1.4em;
     color: #2b4a6f;
-    margin: 20px 0;
+    margin: 60px 0;
 }
 
 .badge {
@@ -92,54 +93,94 @@ nav ul li a {
     margin-bottom: 10px;
 }
 
-.rings {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.ring-group {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.ring {
-    border-radius: 50%;
-    border: 16px solid #31c6d4;
-    background-color: transparent;
+.orbit-system {
     position: relative;
+    width: 380px;
+    height: 320px;
+    margin: 60px auto 0 auto;
 }
 
-.ring.large {
-    width: 120px;
-    height: 120px;
+.center-circle {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-color: #c0392b;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 14px;
+    padding-top: 20px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
-.ring.small {
+/* Orbit Rings */
+
+@keyframes rotateOrbit {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.orbit-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateOrbit linear infinite;
+}
+
+.ring1 {
+    width: 250px;
+    height: 200px;
+    animation-delay: 0s;
+    animation-duration: 10s;
+}
+
+.ring2 {
+    width: 310px;
+    height: 280px;
+    animation-delay: 1s;
+    animation-duration: 14s;
+}
+
+.ring3 {
+    width: 370px;
+    height: 340px;
+    animation-delay: 2s;
+    animation-duration: 18s;
+}
+
+/* Orbit Dots */
+.orbit-dot {
     width: 60px;
     height: 60px;
-    border-width: 10px;
+    background-color: orange;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+    line-height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
 }
 
-.ring:hover::after {
-    content: attr(title);
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #ffffff;
-    color: #2b4a6f;
-    border: 1px solid #ccc;
-    padding: 6px 10px;
-    font-size: 0.9em;
-    white-space: nowrap;
-    border-radius: 5px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    z-index: 5;
-}
+.dot1 { top: 0%; left: 50%; transform: translate(-50%, -50%); }
+.dot2 { top: 100%; left: 50%; transform: translate(-50%, -50%); }
+.dot3 { top: 50%; left: 0%; transform: translate(-50%, -50%); }
+.dot4 { top: 50%; left: 100%; transform: translate(-50%, -50%); }
 
 /*#############################################################################################*/
 /* About us */
@@ -190,7 +231,7 @@ padding: 0 20px;
 }
 
 /*#############################################################################################*/
-/* About us & Our mission */
+/* Our mission */
 /*#############################################################################################*/
 .mission-section {
 padding: 80px 40px;
@@ -326,73 +367,3 @@ font-size: 0.9em;
 .footer-column ul li a:hover {
 text-decoration: underline;
 }
-
-.orbit-system {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: auto;
-}
-
-.center-circle {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background-color: #c0392b;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1.2;
-    font-size: 14px;
-    padding-top: 20px;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
-
-/* Orbit Rings */
-.orbit-ring {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.ring1 {
-    width: 140px;
-    height: 140px;
-}
-
-.ring2 {
-    width: 200px;
-    height: 200px;
-}
-
-.ring3 {
-    width: 260px;
-    height: 260px;
-}
-
-/* Orbit Dots */
-.orbit-dot {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background-color: orange;
-    border-radius: 50%;
-    color: white;
-    text-align: center;
-    line-height: 40px;
-    font-size: 10px;
-    font-weight: bold;
-}
-
-.dot1 { top: 0%; left: 50%; transform: translate(-50%, -50%); }
-.dot2 { top: 100%; left: 50%; transform: translate(-50%, -50%); }
-.dot3 { top: 50%; left: 0%; transform: translate(-50%, -50%); }
-.dot4 { top: 50%; left: 100%; transform: translate(-50%, -50%); }
-.dot5 { top: 0%; left: 0%; transform: translate(-50%, -50%); background-color: green; }
