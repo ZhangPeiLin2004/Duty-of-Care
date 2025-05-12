@@ -1,0 +1,398 @@
+html, body {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 110%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(255, 255, 255); /* Slight transparency */
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between; /* Ensures space between the logo and the nav */
+    align-items: center; /* Vertically centers logo and nav items */
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-right: 30mm; /* Ensure rightmost item is 30mm (113px) from the edge */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.search-icon {
+    height: 20px;
+}
+
+.community-section {
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.community-section h1 {
+    font-size: 2.8em;
+    color: #2b4a6f;
+    margin-bottom: 40px;
+}
+
+.community-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.category {
+    max-width: 320px;
+    text-align: center;
+}
+
+.category h2 {
+    font-size: 1.4em;
+    color: #2b4a6f;
+    margin: 20px 0;
+}
+
+.badge {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.rings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.ring-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ring {
+    border-radius: 50%;
+    border: 16px solid #31c6d4;
+    background-color: transparent;
+    position: relative;
+}
+
+.ring.large {
+    width: 120px;
+    height: 120px;
+}
+
+.ring.small {
+    width: 60px;
+    height: 60px;
+    border-width: 10px;
+}
+
+.ring:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    color: #2b4a6f;
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    font-size: 0.9em;
+    white-space: nowrap;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+}
+
+/*#############################################################################################*/
+/* About us */
+/*#############################################################################################*/
+.about-us-section {
+padding: 80px 40px;
+background-color: white;
+}
+
+.about-us-container {
+max-width: 1000px;
+margin: 0 auto;
+text-align: center;
+}
+
+.about-us-heading {
+font-size: 2.5rem;
+color: #2d4b71;
+margin-bottom: 30px;
+position: relative;
+display: inline-block;
+}
+
+.about-us-heading::before,
+.about-us-heading::after {
+content: "";
+position: absolute;
+top: 50%;
+width: 150px;
+height: 3px;
+background-color: #2d4b71;
+}
+
+.about-us-heading::before {
+left: -170px;
+}
+
+.about-us-heading::after {
+right: -170px;
+}
+
+.about-us-text {
+font-size: 1.1rem;
+line-height: 1.8;
+color: #111;
+text-align: justify;
+padding: 0 20px;
+}
+
+/*#############################################################################################*/
+/* About us & Our mission */
+/*#############################################################################################*/
+.mission-section {
+padding: 80px 40px;
+background-color: white;
+}
+
+.mission-container {
+max-width: 1000px;
+margin: 0 auto;
+text-align: center;
+}
+
+.mission-heading {
+font-size: 2.5rem;
+color: #2d4b71;
+margin-bottom: 30px;
+position: relative;
+display: inline-block;
+}
+
+.mission-heading::before,
+.mission-heading::after {
+content: "";
+position: absolute;
+top: 50%;
+width: 150px;
+height: 3px;
+background-color: #2d4b71;
+}
+
+.mission-heading::before {
+left: -170px;
+}
+
+.mission-heading::after {
+right: -170px;
+}
+
+.mission-text {
+font-size: 1.1rem;
+line-height: 1.8;
+color: #111;
+text-align: justify;
+padding: 0 20px;
+}
+
+/*#############################################################################################*/
+/* Cooperating Companies */
+/*#############################################################################################*/
+.section-heading {
+    text-align: center;
+}  
+
+.ring-row {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+margin-top: 40px;
+}
+
+.ring-group {
+display: flex;
+gap: 30px;
+justify-content: center;
+}
+
+.ring-row-offset {
+margin-left: 30px; /* optional: centers the 3-ring row visually under the 4-ring row */
+}
+
+/*#############################################################################################*/
+/* Footer */
+/*#############################################################################################*/
+footer {
+background-color: #24436E;
+color: white;
+padding: 30px;
+margin-top: 60px;
+}
+
+.footer-container {
+display: flex;
+justify-content: space-between;
+align-items: start;
+max-width: 1200px;
+margin: auto;
+}
+
+/* Left section: Logo and text */
+.footer-left {
+max-width: 250px;
+}
+
+.footer-logo {
+width: 120px; /* Adjust as needed */
+margin-bottom: 10px;
+}
+
+.footer-left p {
+font-size: 0.9em;
+color: #B0C4DE;
+margin: 5px 0;
+}
+
+/* Center Sections: Navigation, Toolbox, Community */
+.footer-sections {
+display: flex;
+gap: 50px;
+}
+
+.footer-column h3 {
+font-size: 1em;
+color: #B0C4DE;
+margin-bottom: 10px;
+}
+
+.footer-column ul {
+list-style: none;
+padding: 0;
+}
+
+.footer-column ul li {
+margin: 5px 0;
+}
+
+.footer-column ul li a {
+text-decoration: none;
+color: white;
+font-size: 0.9em;
+}
+
+.footer-column ul li a:hover {
+text-decoration: underline;
+}
+
+.orbit-system {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+.center-circle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #c0392b;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 14px;
+    padding-top: 20px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* Orbit Rings */
+.orbit-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ring1 {
+    width: 140px;
+    height: 140px;
+}
+
+.ring2 {
+    width: 200px;
+    height: 200px;
+}
+
+.ring3 {
+    width: 260px;
+    height: 260px;
+}
+
+/* Orbit Dots */
+.orbit-dot {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: orange;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.dot1 { top: 0%; left: 50%; transform: translate(-50%, -50%); }
+.dot2 { top: 100%; left: 50%; transform: translate(-50%, -50%); }
+.dot3 { top: 50%; left: 0%; transform: translate(-50%, -50%); }
+.dot4 { top: 50%; left: 100%; transform: translate(-50%, -50%); }
+.dot5 { top: 0%; left: 0%; transform: translate(-50%, -50%); background-color: green; }
