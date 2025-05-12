@@ -23,6 +23,19 @@ def home():
 def serve_css(filename):
     return send_from_directory(STATIC_DIR, filename)
 
+app.secret_key = "replace_this_with_a_random_secret"
+@app.route("/toolbox.html")
+def test_page():
+    return render_template("/toolbox.html")
+
+@app.route("/alternatives")
+def alternatives():
+    return render_template("alternatives.html")
+
+@app.route("/companies")
+def companies():
+    return render_template("companies.html")
+
 # Serve images from /images_DoC/
 @app.route('/images_DoC/<path:filename>')
 def serve_images(filename):

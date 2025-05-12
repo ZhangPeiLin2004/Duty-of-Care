@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PFAS ToolBox</title>
+    <link rel="stylesheet" href="../static_DoC/webstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+    <header>
+        <!-- Logo is outside of the nav container -->
+        <div class="logo">
+            <img src="../images_DoC/logo.png" alt="Duty of Care Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#duty-of-care">Duty Of Care</a></li>
+                <li><a href="#effective-efforts">Effective Efforts</a></li>
+                <li><a href="toolbox.html">Tool Box</a></li>
+                <li><a href="#community">Our Community</a></li>
+                <li><a href="#login">Log in</a></li>
+                <li><a href="#"><i class="fas fa-search"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <h1>What would you like to see?</h1>
+        <button href='alternatives.html' ,id="btn-alternatives">Check Alternatives</button>
+        <button href='companies.html',id="btn-companies">Check Companies</button>
+      
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const altBtn = document.getElementById('btn-alternatives');
+            const compBtn = document.getElementById('btn-companies');
+      
+            // mark that user has checked alternatives
+            altBtn.addEventListener('click', () => {
+              localStorage.setItem('checkedAlternatives', 'true');
+              window.location.href = "{{ url_for('alternatives') }}";
+            });
+      
+            compBtn.addEventListener('click', (e) => {
+              const sawAlt = localStorage.getItem('checkedAlternatives');
+              const sawPopup = localStorage.getItem('popupShown');
+      
+              if (!sawAlt && !sawPopup) {
+                e.preventDefault();
+                localStorage.setItem('popupShown', 'true');
+      
+                const goAlt = confirm("Don't you want to check the alternatives first?");
+                if (goAlt) {
+                  // user chose to go check alternatives
+                  localStorage.setItem('checkedAlternatives', 'true');
+                  window.location.href = "{{ url_for('alternatives') }}";
+                } else {
+                  // user insisted on companies
+                  window.location.href = "{{ url_for('companies') }}";
+                }
+              } else {
+                // either they've seen alternatives or already got the popup
+                window.location.href = "{{ url_for('companies') }}";
+              }
+            });
+          });
+        </script>
+      </body>
+</body>
+</html>
