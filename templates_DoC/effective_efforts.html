@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PFAS Duty of Care</title>
-    <link rel="stylesheet" href="../static_DoC/webstyle.css">
-    <link rel="stylesheet" href="../static_DoC/effeff_style.css">
+    <link rel="stylesheet" href="../static_DoC/css/webstyle.css">
+    <link rel="stylesheet" href="../static_DoC/css/effeff_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="../images_DoC/logo.png" alt="Duty of Care Logo">
+            <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo">
         </div>
         <nav>
             <ul>
-                <li><a href="#duty-of-care">Duty Of Care</a></li>
-                <li><a href="#effective-efforts">Effective Efforts</a></li>
-                <li><a href="#tool-box">Tool Box</a></li>
-                <li><a href="#community">Our Community</a></li>
+                <li><a href="{{ url_for('duty_of_care') }}">Duty Of Care</a></li>
+                <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
+                <li><a href="{{ url_for('toolbox') }}">Toolbox</a></li>
+                <li><a href="{{ url_for('our_community') }}">Our Community</a></li>
                 <li><a href="#login">Log in</a></li>
                 <li><a href="#"><i class="fas fa-search"></i></a></li>
             </ul>
@@ -53,7 +53,7 @@
                     <div class="lil-pic">lil pic</div>
                 </div>
                 <div class="card-right">
-                    <h2 class="story-title">X Company Leading the Way: Real-World PFAS Duty of Care in Action</h2>
+                    <h2 class="story-title"><a href="{{ url_for('story1') }}">X Company Leading the Way: Real-World PFAS Duty of Care in Action</a></h2>
                     <p class="story-date">Sept 15, 2024</p>
                     <p class="story-summary">Few sentences of the story. Lorem ipsum yra tekstas naudojamas spaudos ir grafinio dizaino industrijoje jau nuo XVI amžiaus pradžios.</p>
                     <div class="story-tags">
@@ -70,7 +70,7 @@
                     <div class="lil-pic">lil pic</div>
                 </div>
                 <div class="card-right">
-                    <h2 class="story-title">Duty in Practice: Y Company's Example of PFAS Responsibility</h2>
+                    <h2 class="story-title"><a href="{{ url_for('story1') }}">Duty in Practice: Y Company's Example of PFAS Responsibility</a></h2>
                     <p class="story-date">Feb 11, 2025</p>
                     <p class="story-summary">Few sentences of the story. Lorem ipsum yra tekstas naudojamas spaudos ir grafinio dizaino industrijoje jau nuo XVI amžiaus pradžios.</p>
                     <div class="story-tags">

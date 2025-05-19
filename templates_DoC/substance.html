@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>PFAS Detail</title><link rel="stylesheet" href="../static_DoC/css/style.css"/></head><body>
+<header class="header"><h1>PFAS Toolbox</h1></header>
+<main class="detail">
+<h2 id="name">Substance Name</h2><ul>
+<li><strong>CAS:</strong> <span id="cas"></span></li>
+<li><strong>Use Category:</strong> <span id="category"></span></li>
+<li><strong>Sub-Use:</strong> <span id="sub-use"></span></li>
+<li><strong>Applications:</strong> <span id="applications"></span></li>
+</ul>
+<section class="functions"><h3>Technical Functions</h3><ul id="functions"></ul></section>
+<section class="alternatives"><h3>Alternatives</h3><div id="alternatives"></div></section>
+<section class="hazard"><h3>Hazard Classification</h3><div class="ghs-icons" id="ghs-icons"></div><ul id="h-phrases"></ul></section>
+<section class="change-func"><h3>Change in Functionality</h3><p id="change-text"></p></section>
+<section class="market-update"><h3>Market Uptake</h3><p id="market-info"></p></section>
+<a href="index.html">&larr; Back to List</a>
+</main><footer class="footer"><p>&copy; 2025 PFAS Toolbox</p></footer>
+<script>
+Promise.all([
+  fetch('data/pfas.json').then(r=>r.json()),
+  fetch('data/functions.json').then(r=>r.json()),
+  fetch('data/alternatives.json').then(r=>r.json())
+]).then(([pfas, funcs, alts])=>{
+  const cas=new URLSearchParams(location.search).get('cas');
+  const cur=pfas.find(d=>d.cas===cas);
+  const altList=alts.filter(a=>a.cas===cas);
+  document.getElementById('name').textContent=cur['substance name'];
+  document.getElementById('cas').textContent=cur.cas;
+  document.getElementById('category').textContent=cur['Use categories'];
+  document.getElementById('sub-use').textContent=cur['sub-use'];
+  document.getElementById('applications').textContent=cur.applications;
+  funcs.filter(f=>f.cas===cas).forEach(f=>{
+    const li=document.createElement('li');
+    li.innerHTML=`<strong>${f['technical function']}</strong>: ${f['service']||f['end-use function']||''}`;
+    document.getElementById('functions').appendChild(li);
+  });
+  const altDiv=document.getElementById('alternatives');
+  if(altList.length===0){altDiv.textContent='No alternatives available';}
+  else{
+    altDiv.innerHTML='';
+    altList.forEach(a=>{
+      const card=document.createElement('div');card.className='alternate-card';
+      card.innerHTML=`<h4>Alternative substance: ${a['substance name']}</h4>
+      ${a['PBT assessment']?`<span class="badge badge-pbt">${a['PBT assessment']}</span>`:''}
+      ${a['CLP classification']?`<span class="badge badge-clp">${a['CLP classification']}</span>`:''}
+      <p><strong>Change in Functionality:</strong> ${a['change in functionality']||'No data'}</p>
+      <p><strong>Market Uptake:</strong> ${a['market uptake']||'No data'}</p>`;
+      altDiv.appendChild(card);
+    });
+  }
+  altList.forEach(a=>{
+    (a['CLP classification']||'').split(/[,;]\s*/).forEach(code=>{
+      if(!code)return;
+      const img=document.createElement('img');img.src=`images/ghs/${code.trim().toLowerCase()}.svg`;img.title=code;
+      document.getElementById('ghs-icons').appendChild(img);
+      const li=document.createElement('li');li.textContent=code;document.getElementById('h-phrases').appendChild(li);
+    });
+  });
+  document.getElementById('change-text').textContent=cur['change in functionality']||'No data';
+  document.getElementById('market-info').textContent=cur['market uptake']||'No data';
+});
+</script></body></html>

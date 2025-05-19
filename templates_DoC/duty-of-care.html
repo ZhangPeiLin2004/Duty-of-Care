@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PFAS Duty of Care</title>
-    <link rel="stylesheet" href="../static_DoC/doc_page.css">
+    <link rel="stylesheet" href="../static_DoC/css/doc_page.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <!-- Logo is outside of the nav container -->
         <div class="logo">
-            <img src="../images_DoC/logo.png" alt="Duty of Care Logo">
+            <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo">
         </div>
         <nav>
             <ul>
-                <li><a href="#duty-of-care">Duty Of Care</a></li>
-                <li><a href="#effective-efforts">Effective Efforts</a></li>
-                <li><a href="#tool-box">Tool Box</a></li>
-                <li><a href="#community">Our Community</a></li>
+                <li><a href="{{ url_for('duty_of_care') }}">Duty Of Care</a></li>
+                <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
+                <li><a href="{{ url_for('toolbox') }}">Toolbox</a></li>
+                <li><a href="{{ url_for('our_community') }}">Our Community</a></li>
                 <li><a href="#login">Log in</a></li>
                 <li><a href="#"><i class="fas fa-search"></i></a></li>
             </ul>
@@ -45,7 +45,7 @@
       </aside>
     
       <main>
-        <section id="duty" class="section full-image" style="background-image: url('../images_DoC/water_back.png');">
+        <section id="duty" class="section full-image" style="background-image: url('../static_DoC/images_DoC/water_back.png');">
           <h1>Duty of Care</h1>
         </section>
     
@@ -63,7 +63,7 @@
             <p>Lorem ipsum...</p>
           </section>
     
-        <section id="pioneers" class="section full-image" style="background-image: url('../images_DoC/forward-thinking-leaders.png');">
+        <section id="pioneers" class="section full-image" style="background-image: url('../static_DoC/images_DoC/forward-thinking-leaders.png');">
           <h2>PFAS Pioneers</h2>
         </section>
     
@@ -75,7 +75,7 @@
           </div>
         </section>
     
-        <section id="decision" class="section full-image" style="background-image: url('../images_DoC/decision_tree.png');">
+        <section id="decision" class="section full-image" style="background-image: url('../static_DoC/images_DoC/decision_tree.png');">
           <h2>Decision Tree</h2>
         </section>
       </main>
@@ -89,7 +89,7 @@
     <div class="footer-container">
         <!-- Left Section: Logo and Legal Links -->
         <div class="footer-left">
-            <img src="../images_DoC/logo.png" alt="Duty of Care Logo" class="footer-logo">
+            <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo" class="footer-logo">
             <p>Terms and Conditions</p>
             <p>Contact Us</p>
             <p>©2025 PFAS Trust</p>

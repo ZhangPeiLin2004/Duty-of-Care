@@ -95,3 +95,14 @@
     color: #777;
     font-size: 0.9em;
 }
+
+.story-title a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.story-title a:hover {
+    color: #00bcd4;
+    text-decoration: none;
+}

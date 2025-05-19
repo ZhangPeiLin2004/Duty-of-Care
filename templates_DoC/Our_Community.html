@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Our Community</title>
-    <link rel="stylesheet" href="../static_DoC/our_community.css">
+    <link rel="stylesheet" href="../static_DoC/css/our_community.css">
 </head>
 <body>
      <header>
         <nav>
             <ul>
-                <li><a href="#duty-of-care">Duty Of Care</a></li>
-                <li><a href="#effective-efforts">Effective Efforts</a></li>
-                <li><a href="#tool-box">Tool Box</a></li>
-                <li><a href="#community">Our Community</a></li>
+                <li><a href="{{ url_for('duty_of_care') }}">Duty Of Care</a></li>
+                <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
+                <li><a href="{{ url_for('toolbox') }}">Toolbox</a></li>
+                <li><a href="{{ url_for('our_community') }}">Our Community</a></li>
                 <li><a href="#login">Log in</a></li>
                 <li><a href="#"><i class="fas fa-search"></i></a></li>
             </ul>
@@ -22,46 +22,59 @@
     <main class="community-section">
         <h1>Our Community</h1>
 
-        <div class="community-categories">
-            <!-- Left Category -->
-            <div class="category">
-                <img src="../images_DoC/stamp_3.png" alt="PFAS Pioneer Badge" class="badge">
-                <h2>PFAS Pioneers -<br>Exemplary Leaders</h2>
-                <div class="orbit-system">
-                    <div class="center-circle">Leaders<br><small>PFAS</small></div>
+        <!-- Block 1: Orbit Left, Text Right -->
+        <div class="community-block left">
+            <div class="orbit-system">
+                <div class="center-circle">Leaders<br><small>PFAS</small></div>
 
-                    <div class="orbit-ring ring1">
-                        <div class="orbit-dot dot1">A</div>
-                        <div class="orbit-dot dot2">B</div>
-                    </div>
-                    <div class="orbit-ring ring2">
-                        <div class="orbit-dot dot3">C</div>
-                        <div class="orbit-dot dot4">D</div>
-                    </div>
-                    <div class="orbit-ring ring3">
-                    </div>
+                <div class="orbit-ring ring1">
+                    <div class="orbit-dot dot1">A</div>
+                    <div class="orbit-dot dot2">B</div>
+                </div>
+                <div class="orbit-ring ring2">
+                    <div class="orbit-dot dot3">C</div>
+                    <div class="orbit-dot dot4">D</div>
+                </div>
+                <div class="orbit-ring ring3"></div>
+            </div>
+
+            <div class="community-text">
+                <img src="../static_DoC/images_DoC/stamp_3.png" alt="PFAS Pioneer Badge" class="badge">
+                <h2>PFAS Pioneers -<br>Exemplary Leaders</h2>
+                <p>We collaborate with outstanding leaders tackling PFAS challenges through innovation and outreach.</p>
+
+                <div class="company-info">
+                    <h4>GreenChange Co-op</h4>
+                    <p>Supports urban sustainability and leads PFAS remediation initiatives.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Block 2: Orbit Right, Text Left -->
+        <div class="community-block right">
+            <div class="community-text">
+                <img src="../static_DoC/images_DoC/stamp_1.png" alt="PFAS Contributor Badge" class="badge">
+                <h2>PFAS Pioneers -<br>Engaged Contributors</h2>
+                <p>We support contributors advancing community awareness and everyday action against PFAS exposure.</p>
+
+                <div class="company-info">
+                    <h4>EcoTech Solutions</h4>
+                    <p>Developing tech-driven solutions for detecting and reducing PFAS at household levels.</p>
                 </div>
             </div>
 
-            <!-- Right Category -->
-            <div class="category">
-                <img src="../images_DoC/stamp_1.png" alt="PFAS Pioneer Badge" class="badge">
-                <h2>PFAS Pioneers -<br>Engaged Contributors</h2>
-                <div class="orbit-system">
-                    <div class="center-circle">Leaders<br><small>PFAS</small></div>
+            <div class="orbit-system">
+                <div class="center-circle">Leaders<br><small>PFAS</small></div>
 
-                    <div class="orbit-ring ring1">
-                        <div class="orbit-dot dot1">A</div>
-                        <div class="orbit-dot dot2">B</div>
-                    </div>
-                    <div class="orbit-ring ring2">
-                        <div class="orbit-dot dot3">C</div>
-                        <div class="orbit-dot dot4">D</div>
-                    </div>
-                    <div class="orbit-ring ring3">
-                        
-                    </div>
+                <div class="orbit-ring ring1">
+                    <div class="orbit-dot dot1">A</div>
+                    <div class="orbit-dot dot2">B</div>
                 </div>
+                <div class="orbit-ring ring2">
+                    <div class="orbit-dot dot3">C</div>
+                    <div class="orbit-dot dot4">D</div>
+                </div>
+                <div class="orbit-ring ring3"></div>
             </div>
         </div>
     </main>
@@ -118,7 +131,7 @@
     <div class="footer-container">
         <!-- Left Section: Logo and Legal Links -->
         <div class="footer-left">
-            <img src="../images_DoC/logo.png" alt="Duty of Care Logo" class="footer-logo">
+            <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo" class="footer-logo">
             <p>Terms and Conditions</p>
             <p>Contact Us</p>
             <p>©2025 PFAS Trust</p>

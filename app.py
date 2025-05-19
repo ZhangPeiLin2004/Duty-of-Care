@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, request
 import os
 
 app = Flask(__name__)
@@ -23,18 +23,38 @@ def home():
 def serve_css(filename):
     return send_from_directory(STATIC_DIR, filename)
 
-app.secret_key = "replace_this_with_a_random_secret"
+@app.route("/duty-of-care.html")
+def duty_of_care():
+    return render_template("duty-of-care.html")
+
+@app.route("/effective-efforts.html")
+def effective_efforts():
+    return render_template("effective_efforts.html")
+
 @app.route("/toolbox.html")
-def test_page():
-    return render_template("/toolbox.html")
+def toolbox():
+    return render_template("toolbox.html")
 
-@app.route("/alternatives")
-def alternatives():
-    return render_template("alternatives.html")
+@app.route("/Our_Community.html")
+def our_community():
+    return render_template("our_community.html")
 
-@app.route("/companies")
+@app.route("/story1")
+def story1():
+    return render_template("story1.html")
+
+@app.route("/dt_index")
+def dt_index():
+    return render_template("dt_index.html")
+
+@app.route("/companies.html")
 def companies():
     return render_template("companies.html")
+
+@app.route("/substance")
+def substance():
+    cas_number = request.args.get("cas")
+    return render_template("substance.html", cas=cas_number)
 
 # Serve images from /images_DoC/
 @app.route('/images_DoC/<path:filename>')

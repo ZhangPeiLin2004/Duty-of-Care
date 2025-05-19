@@ -1,0 +1,27 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family:Arial,sans-serif; }
+body { display:grid; grid-template-areas: "header header" "filter main" "footer footer"; grid-template-columns:220px 1fr; grid-template-rows:auto 1fr auto; min-height:100vh; }
+.header{grid-area:header;background:#005B96;color:#fff;padding:1rem;text-align:center;}
+.filter-panel{grid-area:filter;background:#f7f7f7;padding:1rem;border-right:1px solid#ddd;overflow:auto;}
+.filter-panel input[type="search"]{width:100%;padding:.5rem 1rem;border:1px solid#ccc;border-radius:20px;margin-bottom:1rem;}
+.filter-group{margin-bottom:1rem;}
+.filter-group label{font-weight:bold;margin-bottom:.25rem;display:block;}
+.filter-group select{width:100%;height:5rem;border:1px solid#ccc;border-radius:4px;}
+.active-filters{margin-top:1rem;}
+.filter-tag{display:inline-block;background:#005B96;color:#fff;padding:.25rem .5rem;border-radius:3px;margin:.25rem;cursor:pointer;}
+.card-grid{grid-area:main;padding:1rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;}
+.card{background:#fff;border:1px solid#ccc;border-radius:8px;padding:1rem;box-shadow:0 2px 4px rgba(0,0,0,0.1);}
+.card--pbt-high{border-color:#D9534F;}
+.card--pbt-med{border-color:#F0AD4E;}
+.badge{display:inline-block;padding:2px 6px;border-radius:4px;font-size:.8rem;margin-right:4px;}
+.badge-pbt{background:#D9534F;color:#fff;}
+.badge-clp{background:#5BC0DE;color:#fff;}
+.detail{grid-area:main;padding:1rem;overflow:auto;}
+.detail h2{margin-bottom:1rem;}
+.detail ul{list-style:none;margin-bottom:1.5rem;}
+.detail section{margin-bottom:1.5rem;}
+.hazard .ghs-icons img{width:40px;margin-right:8px;vertical-align:middle;}
+.alternate-card{border:1px solid #ddd;border-radius:6px;padding:.75rem;margin-bottom:.75rem;}
+.alternate-card h4{margin-bottom:.5rem;}
+.alternate-card p{margin:0.25rem 0;}
+.change-func p,.market-update p{background:#f9f9f9;padding:.75rem;border-radius:4px;}
+.footer{grid-area:footer;background:#005B96;color:#fff;text-align:center;padding:.75rem;}

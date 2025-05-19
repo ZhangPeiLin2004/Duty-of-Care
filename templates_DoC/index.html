@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PFAS Duty of Care</title>
-    <link rel="stylesheet" href="../static_DoC/webstyle.css">
+    <link rel="stylesheet" href="../static_DoC/css/webstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <!-- Logo is outside of the nav container -->
         <div class="logo">
-            <img src="../images_DoC/logo.png" alt="Duty of Care Logo">
+            <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo">
         </div>
         <nav>
             <ul>
-                <li><a href="#duty-of-care">Duty Of Care</a></li>
-                <li><a href="#effective-efforts">Effective Efforts</a></li>
-                <li><a href="#tool-box">Tool Box</a></li>
-                <li><a href="#community">Our Community</a></li>
+                <li><a href="{{ url_for('duty_of_care') }}">Duty Of Care</a></li>
+                <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
+                <li><a href="{{ url_for('toolbox') }}">Toolbox</a></li>
+                <li><a href="{{ url_for('our_community') }}">Our Community</a></li>
                 <li><a href="#login">Log in</a></li>
                 <li><a href="#"><i class="fas fa-search"></i></a></li>
             </ul>
@@ -118,7 +118,7 @@
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                    <img src="../images_DoC/stamp_1.png" alt="Contributor Image">
+                    <img src="../static_DoC/images_DoC/stamp_1.png" alt="Contributor Image">
                 </div>
                 <div class="card-back">
                     <h2>Engaged Contributor</h2>
@@ -129,7 +129,7 @@
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                    <img src="../images_DoC/stamp_2.png" alt="Advancement Image">
+                    <img src="../static_DoC/images_DoC/stamp_2.png" alt="Advancement Image">
                 </div>
                 <div class="card-back">
                     <h2>Significant Advancement</h2>
@@ -140,7 +140,7 @@
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                    <img src="../images_DoC/stamp_3.png" alt="Leader Image">
+                    <img src="../static_DoC/images_DoC/stamp_3.png" alt="Leader Image">
                 </div>
                 <div class="card-back">
                     <h2>Exemplary Leader</h2>
@@ -161,7 +161,7 @@
         <button class="toolbox-btn">TOOLBOX</button>
     </div>
     <div class="image-content">
-        <img src="../images_DoC/Toolbox.png" alt="PFAS Toolbox">
+        <img src="../static_DoC/images_DoC/Toolbox.png" alt="PFAS Toolbox">
     </div>
 </section>
 
@@ -172,7 +172,7 @@
     <div class="footer-container">
         <!-- Left Section: Logo and Legal Links -->
         <div class="footer-left">
-            <img src="../images_DoC/logo.png" alt="Duty of Care Logo" class="footer-logo">
+            <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo" class="footer-logo">
             <p>Terms and Conditions</p>
             <p>Contact Us</p>
             <p>©2025 PFAS Trust</p>
