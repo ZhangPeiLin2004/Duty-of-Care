@@ -5,9 +5,9 @@ app = Flask(__name__)
 
 # Define absolute paths to your folders
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates_DoC')  # Path to your HTML
-STATIC_DIR = os.path.join(BASE_DIR, 'static_DoC')       # Path to CSS
-IMAGES_DIR = os.path.join(BASE_DIR, 'images_DoC')       # Path to images
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates_DoC')
+STATIC_DIR = os.path.join(BASE_DIR, 'static_DoC')
+IMAGES_DIR = os.path.join(BASE_DIR, 'images_DoC')
 
 # Override default Flask folders
 app.template_folder = TEMPLATES_DIR
@@ -15,7 +15,7 @@ app.static_folder = STATIC_DIR
 
 # Route for the homepage
 @app.route('/')
-def home():
+def index():
     return render_template('index.html')  # Serves from templates_DoC/
 
 # Serve CSS from /static_DoC/

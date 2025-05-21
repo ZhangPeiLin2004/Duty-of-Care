@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <title>Our Community</title>
     <link rel="stylesheet" href="../static_DoC/css/our_community.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
      <header>
+        <div class="logo">
+            <a href="{{ url_for('index') }}">
+                <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo">
+            </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="{{ url_for('duty_of_care') }}">Duty Of Care</a></li>
                 <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
                 <li><a href="{{ url_for('toolbox') }}">Toolbox</a></li>
                 <li><a href="{{ url_for('our_community') }}">Our Community</a></li>
-                <li><a href="#login">Log in</a></li>
-                <li><a href="#"><i class="fas fa-search"></i></a></li>
             </ul>
         </nav>
      </header>
@@ -77,90 +81,155 @@
                 <div class="orbit-ring ring3"></div>
             </div>
         </div>
+
+        <!-- Block 3: Orbit Left, Text Right -->
+        <div class="community-block left">
+            <div class="orbit-system">
+                <div class="center-circle">Leaders<br><small>PFAS</small></div>
+
+                <div class="orbit-ring ring1">
+                    <div class="orbit-dot dot1">A</div>
+                    <div class="orbit-dot dot2">B</div>
+                </div>
+                <div class="orbit-ring ring2">
+                    <div class="orbit-dot dot3">C</div>
+                    <div class="orbit-dot dot4">D</div>
+                </div>
+                <div class="orbit-ring ring3"></div>
+            </div>
+
+            <div class="community-text">
+                <img src="../static_DoC/images_DoC/stamp_2.png" alt="PFAS Pioneer Badge" class="badge">
+                <h2>PFAS Pioneers -<br>Significant Advancement</h2>
+                <p>We collaborate with outstanding leaders tackling PFAS challenges through innovation and outreach.</p>
+
+                <div class="company-info">
+                    <h4>GreenChange Co-op</h4>
+                    <p>Supports urban sustainability and leads PFAS remediation initiatives.</p>
+                </div>
+            </div>
+        </div>
+        
+        <section class="about-us-section">
+            <div class="about-us-container">
+                <h2 class="about-us-heading">About Us</h2>
+                <p class="about-us-text">
+                Lorem ipsum yra tekstas naudojamas spaudos ir grafinio dizaino industrijoje jau nuo XVI amžiaus pradžios. 
+                Jis naudojamas parodyti grafinio pristatymo elementus, tokius kaip tipografija, dizainas ar šriftas. 
+                Lorem ipsum yra tekstas naudojamas spaudos ir grafinio dizaino industrijoje jau nuo XVI amžiaus pradžios. 
+                Jis naudojamas parodyti grafinio pristatymo elementus, tokius kaip tipografija, dizainas ar šriftas.
+                </p>
+            </div>
+        </section>
+            
+        <section class="mission-section">
+            <div class="mission-container">
+                <h2 class="mission-heading">Our Mission</h2>
+                <p class="mission-text">
+                Lorem ipsum yra tekstas naudojamas spaudos ir grafinio dizaino industrijoje jau nuo XVI amžiaus pradžios. 
+                Jis naudojamas parodyti grafinio pristatymo elementus, tokius kaip tipografija, dizainas ar šriftas.
+                Lorem ipsum yra tekstas naudojamas spaudos ir grafinio dizaino industrijoje jau nuo XVI amžiaus pradžios. 
+                Jis naudojamas parodyti grafinio pristatymo elementus, tokius kaip tipografija, dizainas ar šriftas.
+                </p>
+            </div>
+        </section>
+                
+        <section class="section">
+        <div class="section-container swiper-section">
+            <h2 class="section-heading">Cooperating Companies</h2>
+            <div class="swiper-wrapper-container">
+                <div class="swiper-container swiper-companies">
+                    <div class="swiper-wrapper">
+                        <!-- Replace these with real logos later -->
+                        <div class="swiper-slide"><div class="logo-circle" title="Company A"></div></div>
+                        <div class="swiper-slide"><div class="logo-circle" title="Company B"></div></div>
+                        <div class="swiper-slide"><div class="logo-circle" title="Company C"></div></div>
+                        <div class="swiper-slide"><div class="logo-circle" title="Company D"></div></div>
+                        <div class="swiper-slide"><div class="logo-circle" title="Company E"></div></div>
+                        <div class="swiper-slide"><div class="logo-circle" title="Company F"></div></div>
+                        <div class="swiper-slide"><div class="logo-circle" title="Company G"></div></div>
+                        <div class="swiper-slide"><div class="logo-circle" title="Company H"></div></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+        var swiper = new Swiper(".swiper-companies", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+            },
+            640: {
+            slidesPerView: 2,
+            spaceBetween: 20
+            },
+            1024: {
+            slidesPerView: 4,
+            spaceBetween: 30
+            }
+        }
+        });
+        </script>
+
+
+        <!-- ################################################################################################################-->
+        <!-- End-of-Page Section -->
+        <!-- ############################################################################################################### -->
+        <footer>
+            <div class="footer-container">
+                <!-- Left Section: Logo and Legal Links -->
+                <div class="footer-left">
+                    <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo" class="footer-logo">
+                    <p>Terms and Conditions</p>
+                    <p>Contact Us</p>
+                    <p>©2025 PFAS Trust</p>
+                </div>
+
+                <!-- Center Sections: Navigation, Toolbox, Community -->
+                <div class="footer-sections">
+                    <div class="footer-column">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="#">Duty of Care</a></li>
+                            <li><a href="#">Effective Efforts</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Toolbox</h3>
+                        <ul>
+                            <li><a href="#">PFAS alternatives</a></li>
+                            <li><a href="#">PFAS removal</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Our Community</h3>
+                        <ul>
+                            <li><a href="#">Companies</a></li>
+                            <li><a href="#">Our mission</a></li>
+                            <li><a href="#">About us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>  
     </main>
 </body>
 </html>
 
-<section class="about-us-section">
-    <div class="about-us-container">
-        <h2 class="about-us-heading">About Us</h2>
-        <p class="about-us-text">
-        Lorem ipsum yra tekstas naudojamas spaudos ir grafinio dizaino industrijoje jau nuo XVI amžiaus pradžios. 
-        Jis naudojamas parodyti grafinio pristatymo elementus, tokius kaip tipografija, dizainas ar šriftas. 
-        Lorem ipsum yra tekstas naudojamas spaudos ir grafinio dizaino industrijoje jau nuo XVI amžiaus pradžios. 
-        Jis naudojamas parodyti grafinio pristatymo elementus, tokius kaip tipografija, dizainas ar šriftas.
-        </p>
-    </div>
-</section>
-    
-<section class="mission-section">
-    <div class="mission-container">
-        <h2 class="mission-heading">Our Mission</h2>
-        <p class="mission-text">
-        Lorem ipsum yra tekstas naudojamas spaudos ir grafinio dizaino industrijoje jau nuo XVI amžiaus pradžios. 
-        Jis naudojamas parodyti grafinio pristatymo elementus, tokius kaip tipografija, dizainas ar šriftas.
-        Lorem ipsum yra tekstas naudojamas spaudos ir grafinio dizaino industrijoje jau nuo XVI amžiaus pradžios. 
-        Jis naudojamas parodyti grafinio pristatymo elementus, tokius kaip tipografija, dizainas ar šriftas.
-        </p>
-    </div>
-</section>
-        
-<section class="section">
-    <div class="section-container">
-        <h2 class="section-heading">Cooperating Companies</h2>
-    
-        <div class="ring-row">
-        <div class="ring-group">
-            <div class="ring small" title="Hover over to see details"></div>
-            <div class="ring small" title="Hover over to see details"></div>
-            <div class="ring small" title="Hover over to see details"></div>
-            <div class="ring small" title="Hover over to see details"></div>
-        </div>
-        <div class="ring-group ring-row-offset">
-            <div class="ring small" title="Hover over to see details"></div>
-            <div class="ring small" title="Hover over to see details"></div>
-            <div class="ring small" title="Hover over to see details"></div>
-        </div>
-        </div>
-    </div>
-</section>
-<!-- ################################################################################################################-->
-<!-- End-of-Page Section -->
-<!-- ############################################################################################################### -->
-<footer>
-    <div class="footer-container">
-        <!-- Left Section: Logo and Legal Links -->
-        <div class="footer-left">
-            <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo" class="footer-logo">
-            <p>Terms and Conditions</p>
-            <p>Contact Us</p>
-            <p>©2025 PFAS Trust</p>
-        </div>
-
-        <!-- Center Sections: Navigation, Toolbox, Community -->
-        <div class="footer-sections">
-            <div class="footer-column">
-                <h3>Navigation</h3>
-                <ul>
-                    <li><a href="#">Duty of Care</a></li>
-                    <li><a href="#">Effective Efforts</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Toolbox</h3>
-                <ul>
-                    <li><a href="#">PFAS alternatives</a></li>
-                    <li><a href="#">PFAS removal</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Our Community</h3>
-                <ul>
-                    <li><a href="#">Companies</a></li>
-                    <li><a href="#">Our mission</a></li>
-                    <li><a href="#">About us</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>          

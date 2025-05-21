@@ -9,9 +9,10 @@
 </head>
 <body>
     <header>
-        <!-- Logo is outside of the nav container -->
         <div class="logo">
-            <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo">
+            <a href="{{ url_for('index') }}">
+                <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo">
+            </a>
         </div>
         <nav>
             <ul>
@@ -19,8 +20,6 @@
                 <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
                 <li><a href="{{ url_for('toolbox') }}">Toolbox</a></li>
                 <li><a href="{{ url_for('our_community') }}">Our Community</a></li>
-                <li><a href="#login">Log in</a></li>
-                <li><a href="#"><i class="fas fa-search"></i></a></li>
             </ul>
         </nav>
     </header>
@@ -77,7 +76,7 @@
     <div class="story-preview">
         <div class="story-content">
             <p id="story-description">Hover over a story to see details.</p>
-            <a id="story-link" href="#" class="find-out-more">Find out more</a>
+            <a id="story-link" href="{{ url_for('effective_efforts') }}" class="find-out-more">Find out more</a>
         </div>
     </div>
 </section>
@@ -158,7 +157,7 @@
     <div class="text-content">
         <h2>What are your options?</h2>
         <p>Lorem ipsum yra tekstas naudojamas spaudos ir grafinio dizaino industrijoje jau nuo XVI amžiaus pradžios...</p>
-        <button class="toolbox-btn">TOOLBOX</button>
+        <a href="{{ url_for('toolbox') }}" class="toolbox-btn">TOOLBOX</a>
     </div>
     <div class="image-content">
         <img src="../static_DoC/images_DoC/Toolbox.png" alt="PFAS Toolbox">

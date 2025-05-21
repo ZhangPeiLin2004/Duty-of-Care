@@ -17,9 +17,9 @@
 </main><footer class="footer"><p>&copy; 2025 PFAS Toolbox</p></footer>
 <script>
 Promise.all([
-  fetch('data/pfas.json').then(r=>r.json()),
-  fetch('data/functions.json').then(r=>r.json()),
-  fetch('data/alternatives.json').then(r=>r.json())
+  fetch('/static/data/pfas.json').then(r=>r.json()),
+  fetch('/static/data/functions.json').then(r=>r.json()),
+  fetch('/static/data/alternatives.json').then(r=>r.json())
 ]).then(([pfas, funcs, alts])=>{
   const cas=new URLSearchParams(location.search).get('cas');
   const cur=pfas.find(d=>d.cas===cas);

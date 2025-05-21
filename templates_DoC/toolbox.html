@@ -10,7 +10,9 @@
     <header>
         <!-- Logo is outside of the nav container -->
         <div class="logo">
-            <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo">
+            <a href="{{ url_for('index') }}">
+                <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo">
+            </a>
         </div>
         <nav>
             <ul>
@@ -18,8 +20,6 @@
                 <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
                 <li><a href="{{ url_for('toolbox') }}">Toolbox</a></li>
                 <li><a href="{{ url_for('our_community') }}">Our Community</a></li>
-                <li><a href="#login">Log in</a></li>
-                <li><a href="#"><i class="fas fa-search"></i></a></li>
             </ul>
         </nav>
     </header>
