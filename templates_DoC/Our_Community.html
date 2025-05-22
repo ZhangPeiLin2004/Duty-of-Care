@@ -138,57 +138,59 @@
         <div class="section-container swiper-section">
             <h2 class="section-heading">Cooperating Companies</h2>
             <div class="swiper-wrapper-container">
-                <div class="swiper-container swiper-companies">
-                    <div class="swiper-wrapper">
-                        <!-- Replace these with real logos later -->
-                        <div class="swiper-slide"><div class="logo-circle" title="Company A"></div></div>
-                        <div class="swiper-slide"><div class="logo-circle" title="Company B"></div></div>
-                        <div class="swiper-slide"><div class="logo-circle" title="Company C"></div></div>
-                        <div class="swiper-slide"><div class="logo-circle" title="Company D"></div></div>
-                        <div class="swiper-slide"><div class="logo-circle" title="Company E"></div></div>
-                        <div class="swiper-slide"><div class="logo-circle" title="Company F"></div></div>
-                        <div class="swiper-slide"><div class="logo-circle" title="Company G"></div></div>
-                        <div class="swiper-slide"><div class="logo-circle" title="Company H"></div></div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+            <div class="swiper-container swiper-companies">
+                <div class="swiper-wrapper">
+                <!-- 8 logos, change to 4, 8, or 12, etc. -->
+                <div class="swiper-slide"><div class="logo-circle" title="Company A"></div></div>
+                <div class="swiper-slide"><div class="logo-circle" title="Company B"></div></div>
+                <div class="swiper-slide"><div class="logo-circle" title="Company C"></div></div>
+                <div class="swiper-slide"><div class="logo-circle" title="Company D"></div></div>
+                <div class="swiper-slide"><div class="logo-circle" title="Company E"></div></div>
+                <div class="swiper-slide"><div class="logo-circle" title="Company F"></div></div>
+                <div class="swiper-slide"><div class="logo-circle" title="Company G"></div></div>
+                <div class="swiper-slide"><div class="logo-circle" title="Company H"></div></div>
                 </div>
+            </div>
             </div>
         </div>
         </section>
 
+
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script>
-        var swiper = new Swiper(".swiper-companies", {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-            320: {
-            slidesPerView: 1,
-            spaceBetween: 10
-            },
-            640: {
-            slidesPerView: 2,
-            spaceBetween: 20
-            },
-            1024: {
-            slidesPerView: 4,
-            spaceBetween: 30
-            }
-        }
-        });
+            var swiper = new Swiper(".swiper-companies", {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+                spaceBetween: 30,
+                loop: false,
+                rewind: false,
+                autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+                },
+                navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 10,
+                },
+                640: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    slidesPerGroup: 4,
+                    spaceBetween: 30,
+                }
+                }
+            });
         </script>
-
-
 
     </main>
 
