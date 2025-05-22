@@ -53,6 +53,7 @@ def serve_images(filename):
 ############################################################################################################################################
 # ToolBox
 ############################################################################################################################################
+
 @app.route("/toolbox.html", endpoint='toolbox')
 def toolbox():
     session.pop("x_clicked", None)
@@ -69,6 +70,7 @@ def load_data():
     filepath = os.path.join(BASE_DIR, 'static_DoC', 'data', 'companies.csv')
     df = pd.read_csv(filepath, sep=',', engine='python')
     df['TechList'] = df['Technologies'].astype(str).str.split(';')
+    columns = [col for col in df.columns if col != 'TechList']
     return df.to_dict(orient='records')
 
 FILTERS = {
@@ -112,11 +114,13 @@ FILTERS = {
 def companies():
     filepath = os.path.join(BASE_DIR, 'static_DoC', 'data', 'companies.csv')
     df = pd.read_csv(filepath, sep=None, engine='python')
-    df['TechList'] = df['Technologies'].astype(str).str.split(';')  # Optional: useful list parsing
-    df = df.rename(columns={'Contact Link': 'Contact Link'})  # This line may be redundant
+    if 'Technologies' in df.columns:
+        tech_index = df.columns.get_loc("Technologies")
+        df = df.iloc[:, :tech_index + 1]  # Slice columns
     columns = df.columns.tolist()
     data = df.to_dict(orient='records')
     return render_template("companies.html", data=data, columns=columns, filters=FILTERS)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

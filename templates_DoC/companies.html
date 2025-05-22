@@ -40,36 +40,39 @@
       </select>
   </div>
 
-  <table id="company-table">
-      <thead>
-          <tr>
-              {% for col in columns %}
-                  <th>{{ 'Contact Company' if col == 'Contact Link' else ('Water cleaning companies' if col == 'Exhibitor' else col) }}</th>
-              {% endfor %}
-          </tr>
-      </thead>
-      <tbody>
-          {% for row in data %}
-              <tr>
-                  {% for col in columns %}
-                      {% if col == 'Contact Link' %}
-                          <td><a href="{{ row[col] }}" target="_blank">Contact Company</a></td>
-                      {% elif col == 'Technologies' %}
-                          <td>
-                              <ul>
-                                  {% for tech in row[col].split(';') %}
-                                      <li>{{ tech.strip() }}</li>
-                                  {% endfor %}
-                              </ul>
-                          </td>
-                      {% else %}
-                          <td>{{ row[col] }}</td>
-                      {% endif %}
-                  {% endfor %}
-              </tr>
-          {% endfor %}
-      </tbody>
-  </table>
+<table id="company-table">
+    <thead>
+        <tr>
+            {% for col in columns %}
+                <th>{{ 'Contact Company' if col == 'Contact Link' else ('Water cleaning companies' if col == 'Exhibitor' else col) }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in data %}
+            <tr>
+                {% for col in columns %}
+                    {% if col == 'Contact Link' %}
+                        <td><a href="{{ row[col] }}" target="_blank">Contact Company</a></td>
+                    {% elif col == 'Technologies' %}
+                        <td>
+                            <ul>
+                                {% for tech in row[col].split(';') %}
+                                    <li>{{ tech.strip() }}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    {% else %}
+                        <td>{{ row[col] }}</td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+
+
+</table>
+
 
   <h6><b>Disclaimer</b>: This table is for informational purposes only. I am not affiliated with or endorsed by any of the companies listed. The information presented is based on publicly available details from the companies' websites at the time the table was created.
      There is no guarantee of accuracy, completeness, or ongoing updates. Offerings, technologies, and services may have changed since this was compiled. Please verify any critical information directly with the respective companies.</h6>
