@@ -27,17 +27,33 @@
 <div class="page-title">
   <h1>ToolBox</h1>
 </div>
+
   <div class="page-container">
-    <div class="image-container">
-      <img src="/static_DoC/images_DoC/Toolbox.png" alt="Toolbox" class="toolbox-img">
+
+    <div class="toolbox-cards">
+    <div class="card-img">
+      <div class="toolbox-img">
+        <div class="image-container">
+          <img src="/static_DoC/images_DoC/Toolbox.png" alt="Toolbox" class="toolbox-img">
+        </div>
+      </div>
+    </div>
     </div>
 
     <div class="toolbox-cards">
+
+      <div class="card">
+        <p>
+        Check our <b>PFAS Duty of Care Self-Check</b>
+        </p>
+          <a href="#" id="btn-x" class="btn btn-primary">PFAS Duty of Care Self-Check</a>
+      </div>
+      
       <div class="card">
         <p>
           Check our data base where you can find different PFAS alternatives to eliminate your emissions at all. You can filter depending on your industry.
         </p>
-        <a href="{{ url_for('dt_index') }}" id="btn-x" class="btn btn-primary">PFAS Alternatives</a>
+        <a href="{{ url_for('substance') }}" id="btn-x" class="btn btn-secondary">PFAS Alternatives</a>
       </div>
 
       <div class="card">
@@ -48,43 +64,32 @@
       </div>
     </div>
   </div>
-  </div>
-</body>
 
-<!-- ################################################################################################################-->
-<!-- End-of-Page Section -->
-<!-- ############################################################################################################### -->
-<footer>
+
+  <footer>
     <div class="footer-container">
-        <!-- Left Section: Logo and Legal Links -->
         <div class="footer-left">
-            <div class="footer-logo-text">
-                <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo" class="footer-logo">
-                <div class="footer-text">
-                    <p>Terms and Conditions</p>
-                    <p>Contact Us</p>
-                    <p>©2025 PFAS Trust</p>
-                </div>
-            </div>
+            <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo" class="footer-logo">
+            <p>Terms and Conditions</p>
+            <p>Contact Us</p>
+            <p>©2025 PFAS Trust</p>
         </div>
 
-
-        <!-- Center Sections: Navigation, Toolbox, Community -->
         <div class="footer-sections">
             <div class="footer-column">
-                <h3>Navigation</h3>
-                <ul>
-                    <li><a href="{{ url_for('duty_of_care') }}">Duty of Care</a></li>
-                    <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Toolbox</h3>
-                <ul>
-                    <li><a href="{{ url_for('toolbox') }}">PFAS alternatives</a></li>
-                    <li><a href="{{ url_for('toolbox') }}">PFAS removal technologies</a></li>
-                </ul>
-            </div>
+              <h3>Navigation</h3>
+              <ul>
+                  <li><a href="{{ url_for('duty_of_care') }}">Duty of Care</a></li>
+                  <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Toolbox</h3>
+              <ul>
+                  <li><a href="{{ url_for('substance') }}">PFAS alternatives</a></li>
+                  <li><a href="{{ url_for('companies') }}">PFAS removal</a></li>
+              </ul>
+          </div>
             <div class="footer-column">
                 <h3>Our Community</h3>
                 <ul>
@@ -96,6 +101,7 @@
         </div>
     </div>
 </footer>
+
 <script>
   document.addEventListener('DOMContentLoaded', function(){
 
@@ -125,4 +131,5 @@
 });
 });
 </script>
+</body>
 </html>
