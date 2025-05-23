@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    border-bottom: 1px solid #ccc;
+  }
+
+main {padding: 20px;
+    margin-top: 80px;}
+
+h1 {
+    text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+#filters {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.filter-category {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.filter-category div {
+    margin-top: 5px;
+}
+
+.page-title {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .page-title h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #24436E;
+    font-weight: bold;
+  }
+  #filters {
+    text-align: center;
+    margin: 20px;
+  }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #eee;
+}
+
+a {
+    color: #6096BA;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+#tech-filter {
+    width: 300px;
+}
+td ul {
+    padding-left: 20px;
+    margin: 0;
+}
+td ul li {
+    list-style-type: disc;
+}
+
+footer {
+    background-color: #24436E;
+    color: white;
+    padding: 30px;
+    width: 100%;
+    margin: 0;
+    border: none;
+}
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-left {
+    max-width: 250px;
+  }
+  
+  .footer-logo {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-left p {
+    font-size: 0.9em;
+    color: #B0C4DE;
+    margin: 5px 0;
+  }
+  
+  .footer-sections {
+    display: flex;
+    gap: 50px;
+  }
+  
+  .footer-column h3 {
+    font-size: 1em;
+    color: #B0C4DE;
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin: 5px 0;
+  }
+  
+  .footer-column ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9em;
+  }
+  
+  .footer-column ul li a:hover {
+    text-decoration: underline;
+  }

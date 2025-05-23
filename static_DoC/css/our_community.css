@@ -45,18 +45,25 @@
     position: absolute;
     width: 90px;
     height: 90px;
-    background-color: #c0392b;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1.2;
-    font-size: 14px;
-    padding-top: 20px;
+    background-size: cover;
+    background-position: center;
     border-radius: 50%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+}
+
+.center-exemplary {
+    background-image: url("/static_DoC/images_DoC/exemplary_leader.webp");
+}
+
+.center-engaged {
+    background-image: url("/static_DoC/images_DoC/engaged_contributor.webp");
+}
+
+.center-advancement {
+    background-image: url("/static_DoC/images_DoC/significant_advancement.webp");
 }
 
 .community-block {
