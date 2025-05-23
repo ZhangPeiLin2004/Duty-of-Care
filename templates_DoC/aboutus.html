@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Community</title>
+    <link rel="stylesheet" href="../static_DoC/css/our_community.css">
+    <link rel="stylesheet" href="../static_DoC/css/webstyle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+<section class="about-us-section">
+            <div class="about-us-container">
+                <h2 class="about-us-heading">About Us</h2>
+                <p class="about-us-text">
+                Lorem ipsum yra tekstas naudojamas spaudos ir grafinio dizaino industrijoje jau nuo XVI amžiaus pradžios. 
+                Jis naudojamas parodyti grafinio pristatymo elementus, tokius kaip tipografija, dizainas ar šriftas. 
+                Lorem ipsum yra tekstas naudojamas spaudos ir grafinio dizaino industrijoje jau nuo XVI amžiaus pradžios. 
+                Jis naudojamas parodyti grafinio pristatymo elementus, tokius kaip tipografija, dizainas ar šriftas.
+                </p>
+            </div>
+        </section>
+            
+        <section class="mission-section">
+            <div class="mission-container">
+                <h2 class="mission-heading">Our Mission</h2>
+                <p class="mission-text">
+                Lorem ipsum yra tekstas naudojamas spaudos ir grafinio dizaino industrijoje jau nuo XVI amžiaus pradžios. 
+                Jis naudojamas parodyti grafinio pristatymo elementus, tokius kaip tipografija, dizainas ar šriftas.
+                Lorem ipsum yra tekstas naudojamas spaudos ir grafinio dizaino industrijoje jau nuo XVI amžiaus pradžios. 
+                Jis naudojamas parodyti grafinio pristatymo elementus, tokius kaip tipografija, dizainas ar šriftas.
+                </p>
+            </div>
+        </section>
+                
+        <section class="section">
+        <div class="section-container swiper-section">
+            <h2 class="section-heading">Cooperating Companies</h2>
+            <div class="swiper-wrapper-container">
+            <div class="swiper-container swiper-companies">
+                <div class="swiper-wrapper">
+                <!-- 8 logos, change to 4, 8, or 12, etc. -->
+                <div class="swiper-slide"><div class="logo-circle" title="Company A"></div></div>
+                <div class="swiper-slide"><div class="logo-circle" title="Company B"></div></div>
+                <div class="swiper-slide"><div class="logo-circle" title="Company C"></div></div>
+                <div class="swiper-slide"><div class="logo-circle" title="Company D"></div></div>
+                <div class="swiper-slide"><div class="logo-circle" title="Company E"></div></div>
+                <div class="swiper-slide"><div class="logo-circle" title="Company F"></div></div>
+                <div class="swiper-slide"><div class="logo-circle" title="Company G"></div></div>
+                <div class="swiper-slide"><div class="logo-circle" title="Company H"></div></div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".swiper-companies", {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+                spaceBetween: 30,
+                loop: false,
+                rewind: false,
+                autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+                },
+                navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 10,
+                },
+                640: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    slidesPerGroup: 4,
+                    spaceBetween: 30,
+                }
+                }
+            });
+        </script>
+</body>
+
+<!-- ################################################################################################################-->
+<!-- End-of-Page Section -->
+<!-- ############################################################################################################### -->
+<footer>
+    <div class="footer-container">
+        <!-- Left Section: Logo and Legal Links -->
+        <div class="footer-left">
+            <div class="footer-logo-text">
+                <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo" class="footer-logo">
+                <div class="footer-text">
+                    <p>Terms and Conditions</p>
+                    <p>Contact Us</p>
+                    <p>©2025 PFAS Trust</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Center Sections: Navigation, Toolbox, Community -->
+        <div class="footer-sections">
+            <div class="footer-column">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="{{ url_for('duty_of_care') }}">Duty of Care</a></li>
+                    <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Toolbox</h3>
+                <ul>
+                    <li><a href="{{ url_for('toolbox') }}">PFAS alternatives</a></li>
+                    <li><a href="{{ url_for('toolbox') }}">PFAS removal technologies</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Our Community</h3>
+                <ul>
+                    <li><a href="#">Companies</a></li>
+                    <li><a href="#">Our mission</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

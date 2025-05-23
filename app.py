@@ -33,9 +33,13 @@ def duty_of_care():
 def effective_efforts():
     return render_template("effective_efforts.html")
 
-@app.route("/Our_Community.html")
-def our_community():
-    return render_template("our_community.html")
+@app.route("/certification.html")
+def certification():
+    return render_template("certification.html")
+
+@app.route("/aboutus.html")
+def aboutus():
+    return render_template("aboutus.html")
 
 @app.route("/story1")
 def story1():
