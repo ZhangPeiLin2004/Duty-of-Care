@@ -25,92 +25,61 @@
         </nav>
     </header>
 
-  <div class="page-title">
-      <h1>PFAS Toolbox</h1>
-  </div>
-  <aside class="filter-panel">
+ <aside class="filter-panel">
     <input type="search" id="search" placeholder="🔍 Search by name or CAS..."/>
-    <a href="{{ url_for('guide') }}" class="guide-link">📖 Guide</a>
-    <div class="filter-group">
-      <label for="category">Use Category</label>
-      <select id="category" multiple></select>
-    </div>
-    <div class="filter-group">
-      <label for="sub-use">Sub-Use</label>
-      <select id="sub-use" multiple></select>
-    </div>
-    <div class="filter-group">
-      <label for="applications">Applications</label>
-      <select id="applications" multiple></select>
-    </div>
-    <div class="filter-group">
-      <label for="pbt">PBT Assessment</label>
-      <select id="pbt" multiple></select>
-    </div>
-    <div class="filter-group">
-      <label for="clp">CLP Classification</label>
-      <select id="clp" multiple></select>
-    </div>
+    <a href="guide.html" class="guide-link">📖 Guide</a>
+    <div class="filter-group"><label for="category">Use Category</label><select id="category" multiple></select></div>
+    <div class="filter-group"><label for="sub-use">Sub-Use</label><select id="sub-use" multiple></select></div>
+    <div class="filter-group"><label for="applications">Applications</label><select id="applications" multiple></select></div>
     <button id="clear-filters" class="clear-btn">Clear All Filters</button>
     <div id="active-filters" class="active-filters"></div>
   </aside>
   <main class="card-grid"></main>
   <footer class="footer"><p>&copy; 2025 PFAS Toolbox</p></footer>
   <script>
-    const substanceUrlBase = "{{ url_for('substance') }}";
     function populateSelect(id, items) {
-      const sel=document.getElementById(id);
-      items.sort().forEach(v=>{const opt=document.createElement('option');opt.value=v;opt.textContent=v;sel.appendChild(opt);});
-    }
-    function addTag(type,value){
-      const tag=document.createElement('span');tag.className='filter-tag';tag.textContent=`${type}: ${value}`;
-      tag.onclick=()=>{document.getElementById(type).querySelector(`option[value="${value}"]`).selected=false;applyFilters();};
-      document.getElementById('active-filters').appendChild(tag);
+      const sel = document.getElementById(id); sel.innerHTML='';
+      items.sort().forEach(v=>{ const o = document.createElement('option'); o.value=v; o.textContent=v; sel.appendChild(o); });
     }
     let dataList=[];
-    Promise.all([
-      fetch("{{ url_for('static', filename='data/pfas.json') }}").then(r => r.json()),
-      fetch("{{ url_for('static', filename='data/alternatives.json') }}").then(r => r.json())
-    ])
-    .then(([pfas,alts])=>{
-      const map=Object.fromEntries(alts.map(a=>[a.cas,a]));
-      dataList=pfas.map(i=>({...i,pbt:map[i.cas]?.['PBT assessment']||'',clp:map[i.cas]?.['CLP classification']||''}));
-      populateSelect('category',[...new Set(dataList.map(i=>i['Use categories']))]);
-      populateSelect('sub-use',[...new Set(dataList.map(i=>i['sub-use']))]);
-      populateSelect('applications',[...new Set(dataList.map(i=>i.applications))]);
-      populateSelect('pbt',[...new Set(dataList.map(i=>i.pbt).filter(Boolean))]);
-      populateSelect('clp',[...new Set(dataList.map(i=>i.clp).filter(Boolean))]);
+    fetch('data/pfas.json').then(r=>r.json()).then(data=>{
+      dataList=data;
+      populateSelect('category',[...new Set(data.map(i=>i['Use categories']))]);
+      populateSelect('sub-use',[...new Set(data.map(i=>i['sub-use']))]);
+      populateSelect('applications',[...new Set(data.map(i=>i.applications))]);
       render(dataList);
     });
-    function render(list){
-      const grid = document.querySelector('.card-grid');
-      grid.innerHTML = '';
-      list.forEach(i => {
-        const c = document.createElement('div');
-        c.className = 'card' + 
-          (i.pbt === 'High' ? ' card--pbt-high' : '') + 
-          (i.pbt === 'Medium' ? ' card--pbt-med' : '');
-        c.innerHTML = `
-          <h3>${i['substance name']}</h3>
-          <p>CAS: ${i.cas}</p>
-          ${i.pbt ? `<span class="badge badge-pbt">${i.pbt}</span>` : ''}
-          ${i.clp ? `<span class="badge badge-clp">${i.clp}</span>` : ''}
-          <a href="${substanceUrlBase}?cas=${encodeURIComponent(i.cas)}">View Details</a>
-        `;
+    function render(list) {
+      const grid=document.querySelector('.card-grid'); grid.innerHTML='';
+      list.forEach(i=>{
+        const c=document.createElement('div'); c.className='card';
+        c.innerHTML=`<h3>${i['substance name']}</h3><p>CAS: ${i.cas}</p><p>Elem Comp: ${i['elemental composition']||'N/A'}</p><a href="substance.html?cas=${encodeURIComponent(i.cas)}">View Details</a>`;
         grid.appendChild(c);
       });
     }
-    function applyFilters(){
-      const s=document.getElementById('search').value.toLowerCase();
-      const getSel=v=>Array.from(document.getElementById(v).selectedOptions).map(o=>o.value);
-      const cats=getSel('category'),subs=getSel('sub-use'),apps=getSel('applications'),pbts=getSel('pbt'),clps=getSel('clp');
+    function applyFilters() {
+      const s = document.getElementById('search').value.toLowerCase();
+      const getSel=id=>Array.from(document.getElementById(id).selectedOptions).map(o=>o.value);
+      const cats=getSel('category'), subs=getSel('sub-use'), apps=getSel('applications');
       document.getElementById('active-filters').innerHTML='';
-      cats.forEach(v=>addTag('category',v));subs.forEach(v=>addTag('sub-use',v));apps.forEach(v=>addTag('applications',v));
-      pbts.forEach(v=>addTag('pbt',v));clps.forEach(v=>addTag('clp',v));
-      const filtered=dataList.filter(i=>(!s||(i['substance name'].toLowerCase().includes(s)||i.cas.includes(s)))&&(cats.length?cats.includes(i['Use categories']):true)&&(subs.length?subs.includes(i['sub-use']):true)&&(apps.length?apps.includes(i.applications):true)&&(pbts.length?pbts.includes(i.pbt):true)&&(clps.length?clps.includes(i.clp):true));
+      cats.forEach(v=>{ const tag=document.createElement('span'); tag.className='filter-tag'; tag.textContent='× Use Category: '+v; tag.onclick=()=>{ document.getElementById('category').querySelector(`option[value="${v}"]`).selected=false; applyFilters(); }; document.getElementById('active-filters').appendChild(tag); });
+      subs.forEach(v=>{ const tag=document.createElement('span'); tag.className='filter-tag'; tag.textContent='× Sub-Use: '+v; tag.onclick=()=>{ document.getElementById('sub-use').querySelector(`option[value="${v}"]`).selected=false; applyFilters(); }; document.getElementById('active-filters').appendChild(tag); });
+      apps.forEach(v=>{ const tag=document.createElement('span'); tag.className='filter-tag'; tag.textContent='× Applications: '+v; tag.onclick=()=>{ document.getElementById('applications').querySelector(`option[value="${v}"]`).selected=false; applyFilters(); }; document.getElementById('active-filters').appendChild(tag); });
+      const filtered=dataList.filter(i=>
+        (!s||i['substance name'].toLowerCase().includes(s)||i.cas.includes(s))&&
+        (!cats.length||cats.includes(i['Use categories']))&&
+        (!subs.length||subs.includes(i['sub-use']))&&
+        (!apps.length||apps.includes(i.applications))
+      );
       render(filtered);
     }
-    ['search','category','sub-use','applications','pbt','clp'].forEach(id=>document.getElementById(id).addEventListener(id==='search'?'input':'change',applyFilters));
+    document.getElementById('search').addEventListener('input',applyFilters);
+    ['category','sub-use','applications'].forEach(id=>document.getElementById(id).addEventListener('change',applyFilters));
+    document.getElementById('clear-filters').addEventListener('click',()=>{
+      document.getElementById('search').value='';
+      ['category','sub-use','applications'].forEach(id=>{ Array.from(document.getElementById(id).options).forEach(o=>o.selected=false); });
+      applyFilters();
+    });
   </script>
 </body>
 </html>
