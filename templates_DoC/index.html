@@ -209,15 +209,15 @@
             <div class="footer-column">
                 <h3>Navigation</h3>
                 <ul>
-                    <li><a href="#">Duty of Care</a></li>
-                    <li><a href="#">Effective Efforts</a></li>
+                    <li><a href="{{ url_for('duty_of_care') }}">Duty of Care</a></li>
+                    <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h3>Toolbox</h3>
                 <ul>
-                    <li><a href="#">PFAS alternatives</a></li>
-                    <li><a href="#">PFAS removal</a></li>
+                    <li><a href="{{ url_for('toolbox') }}">PFAS alternatives</a></li>
+                    <li><a href="{{ url_for('toolbox') }}">PFAS removal technologies</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -231,4 +231,5 @@
         </div>
     </div>
 </footer>
+</body>
 </html>

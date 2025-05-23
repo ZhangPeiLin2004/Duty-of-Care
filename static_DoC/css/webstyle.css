@@ -11,6 +11,11 @@ html, body {
     overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
+footer {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -21,19 +26,17 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgb(255, 255, 255); /* Slight transparency */
+    background-color: rgb(255, 255, 255);
     padding: 15px 5%;
     display: flex;
-    justify-content: space-between; /* Ensures space between the logo and the nav */
-    align-items: center; /* Vertically centers logo and nav items */
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Ensure logo stays on the left */
 .logo img {
-    height: 100px;
+    height: 85px;
 }
 
-/* Align navigation items to the right */
 nav {
     flex-grow: 1;
     display: flex;
@@ -57,11 +60,6 @@ nav ul li a {
     font-size: 16px;
     font-weight: bold;
 }
-
-.search-icon {
-    height: 20px;
-}
-
 
 /* Hero Section with Background Image */
 .hero {

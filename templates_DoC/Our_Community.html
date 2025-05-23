@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Our Community</title>
     <link rel="stylesheet" href="../static_DoC/css/our_community.css">
+    <link rel="stylesheet" href="../static_DoC/css/webstyle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
@@ -193,32 +194,39 @@
         </script>
 
     </main>
-
+</body>
 <!-- ################################################################################################################-->
 <!-- End-of-Page Section -->
 <!-- ############################################################################################################### -->
-    <footer>
+<footer>
     <div class="footer-container">
+        <!-- Left Section: Logo and Legal Links -->
         <div class="footer-left">
-            <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo" class="footer-logo">
-            <p>Terms and Conditions</p>
-            <p>Contact Us</p>
-            <p>©2025 PFAS Trust</p>
+            <div class="footer-logo-text">
+                <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo" class="footer-logo">
+                <div class="footer-text">
+                    <p>Terms and Conditions</p>
+                    <p>Contact Us</p>
+                    <p>©2025 PFAS Trust</p>
+                </div>
+            </div>
         </div>
 
+
+        <!-- Center Sections: Navigation, Toolbox, Community -->
         <div class="footer-sections">
             <div class="footer-column">
                 <h3>Navigation</h3>
                 <ul>
-                    <li><a href="#">Duty of Care</a></li>
-                    <li><a href="#">Effective Efforts</a></li>
+                    <li><a href="{{ url_for('duty_of_care') }}">Duty of Care</a></li>
+                    <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h3>Toolbox</h3>
                 <ul>
-                    <li><a href="#">PFAS alternatives</a></li>
-                    <li><a href="#">PFAS removal</a></li>
+                    <li><a href="{{ url_for('toolbox') }}">PFAS alternatives</a></li>
+                    <li><a href="{{ url_for('toolbox') }}">PFAS removal technologies</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -231,7 +239,6 @@
             </div>
         </div>
     </div>
-    </footer>
-</body>
+</footer>
 </html>
 
