@@ -8,12 +8,12 @@ html, body {
 }
 body {
   font-family: 'Trebuchet MS', sans-serif;
-  background: #e8eff3;
+  background: #ffffff;
   color: #000;
 }
 .page-title {
   width: 100%;
-  background: #e8eff3;
+  background: #ffffff;
   padding: 2rem 1rem;
   box-sizing: border-box;
   margin-top: 60px; 
@@ -83,63 +83,4 @@ body {
 .btn:active {
   transform: translateY(-1px) scale(1.02);
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-footer {
-  background-color: #24436E;
-  color: white;
-  padding: 30px;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.footer-left {
-  max-width: 250px;
-}
-
-.footer-logo {
-  width: 120px;
-  margin-bottom: 10px;
-}
-
-.footer-left p {
-  font-size: 0.9em;
-  color: #B0C4DE;
-  margin: 5px 0;
-}
-
-.footer-sections {
-  display: flex;
-  gap: 50px;
-}
-
-.footer-column h3 {
-  font-size: 1em;
-  color: #B0C4DE;
-  margin-bottom: 10px;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column ul li {
-  margin: 5px 0;
-}
-
-.footer-column ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 0.9em;
-}
-
-.footer-column ul li a:hover {
-  text-decoration: underline;
 }

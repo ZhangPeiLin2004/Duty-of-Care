@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PFAS Duty of Care</title>
     <link rel="stylesheet" href="../static_DoC/css/doc_page.css">
+    <link rel="stylesheet" href="../static_DoC/css/webstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -471,7 +472,7 @@
 
 
       </main>
-    
+</body>  
 
 
 <!-- ################################################################################################################-->
@@ -481,26 +482,31 @@
     <div class="footer-container">
         <!-- Left Section: Logo and Legal Links -->
         <div class="footer-left">
-            <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo" class="footer-logo">
-            <p>Terms and Conditions</p>
-            <p>Contact Us</p>
-            <p>©2025 PFAS Trust</p>
+            <div class="footer-logo-text">
+                <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo" class="footer-logo">
+                <div class="footer-text">
+                    <p>Terms and Conditions</p>
+                    <p>Contact Us</p>
+                    <p>©2025 PFAS Trust</p>
+                </div>
+            </div>
         </div>
+
 
         <!-- Center Sections: Navigation, Toolbox, Community -->
         <div class="footer-sections">
             <div class="footer-column">
                 <h3>Navigation</h3>
                 <ul>
-                    <li><a href="#">Duty of Care</a></li>
-                    <li><a href="#">Effective Efforts</a></li>
+                    <li><a href="{{ url_for('duty_of_care') }}">Duty of Care</a></li>
+                    <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h3>Toolbox</h3>
                 <ul>
-                    <li><a href="#">PFAS alternatives</a></li>
-                    <li><a href="#">PFAS removal</a></li>
+                    <li><a href="{{ url_for('toolbox') }}">PFAS alternatives</a></li>
+                    <li><a href="{{ url_for('toolbox') }}">PFAS removal technologies</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -574,8 +580,5 @@
     document.addEventListener('DOMContentLoaded', () => {
     decisionTree.initialize();
 });
-
-
-    </script>
-</body>
+</script>
 </html>

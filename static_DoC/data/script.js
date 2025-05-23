@@ -20,28 +20,28 @@ document.addEventListener("DOMContentLoaded", function () {
 // Define the stories with titles, images, descriptions, and links
 const stories = [
     {
-        title: "Clean Water Initiative",
-        image: "/Images/RT_clean-affordable-water_hero_shutterstock_1486636016-e1656539325171.jpg",
-        description: "A global effort to provide access to clean water.",
-        link: "https://example.com/clean-water"
+        title: "SiliconGuard Innovations: Biological Breakthroughs in Semiconductor PFAS Remediation",
+        image: "../static_DoC/images_DoC/stories_images/story8img.jpg",
+        description: "SiliconGuard Innovations showcases a groundbreaking biological treatment approach for PFAS within the semiconductor industry. This pioneering effort demonstrates the potential for sustainable, environmentally friendly methods to address complex industrial PFAS challenges.",
+        link: "/effective-efforts.html"
     },
     {
-        title: "Ocean Conservation",
-        image: "/Images/ocean_conservation.jpg",
-        description: "Efforts to protect marine life and ecosystems.",
-        link: "https://example.com/ocean-conservation"
+        title: "CoatClean Technologies: Eliminating PFAS from Paint Manufacturing Wastewater",
+        image: "../static_DoC/images_DoC/stories_images/story6img.jpg",
+        description: "A leading paint and coating manufacturer, in partnership with a specialized technology provider, has successfully deployed an innovative PFAS destruction solution. This collaboration showcases how advanced treatment can eliminate PFAS from industrial effluents, setting a new standard for environmental stewardship in the sector.",
+        link: "/effective-efforts.html"
     },
     {
-        title: "Renewable Energy Solutions",
-        image: "/Images/renewable_energy.jpg",
-        description: "Innovative approaches to sustainable energy.",
-        link: "https://example.com/renewable-energy"
+        title: "EcoPlate Solutions: A New Standard in Responsible Plating",
+        image: "../static_DoC/images_DoC/stories_images/story2img.jpg",
+        description: "EcoPlate Solutions leads the charge in sustainable electroplating by implementing a revolutionary PFAS destruction technology. This initiative showcases their commitment to environmental responsibility, demonstrating how advanced destruction methods can eliminate persistent PFAS compounds from industrial wastewater and sludge.",
+        link: "/effective-efforts.html"
     },
     {
-        title: "Community Sustainability Projects",
-        image: "/Images/community_sustainability.jpg",
-        description: "Local communities taking action for a better future.",
-        link: "https://example.com/community-sustainability"
+        title: "ChemGuard Systems: Pioneering Biological Solutions for PFAS in Manufacturing",
+        image: "../static_DoC/images_DoC/stories_images/story4img.jpg",
+        description: "ChemGuard Systems is at the forefront of chemical manufacturing innovation, deploying advanced biological treatment processes to address PFAS contamination. Their work demonstrates the viability of biological degradation as a sustainable and effective solution for complex industrial wastewaters containing PFAS.",
+        link: "/effective-efforts.html"
     }
 ];
 
