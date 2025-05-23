@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guide – PFAS Toolbox</title>
+  <link rel="stylesheet" href="../static_DoC/css/style.css"/>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('index') }}">
+                <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('duty_of_care') }}">Duty Of Care</a></li>
+                <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
+                <li><a href="{{ url_for('toolbox') }}">Toolbox</a></li>
+                <li><a href="{{ url_for('our_community') }}">Our Community</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+  <main class="guide">
+    <h1>How to Use PFAS Toolbox</h1>
+
+    <div class="section-card">
+      <section>
+        <h2>Overview</h2>
+        <p>
+          The PFAS Toolbox helps you explore per- and polyfluoroalkyl substances (PFAS).  
+          You can view their core functions, elemental composition, recommended alternatives,  
+          changes in functionality, market uptake, and hazard classifications.
+        </p>
+      </section>
+    </div>
+
+    <div class="section-card">
+      <section>
+        <h2>Search &amp; Filter</h2>
+        <ul>
+          <li><strong>Search by Name or CAS:</strong> Type a substance name or CAS number into the search bar for instant filtering.</li>
+          <li><strong>Use Category / Sub-Use / Applications:</strong> Multi-select filters narrow results; click “×” on tags to remove.</li>
+          <li><strong>Clear All Filters:</strong> Click “Clear All Filters” to reset.</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="section-card">
+      <section>
+        <h2>List View</h2>
+        <p>
+          Filtered results appear as cards showing the substance’s name, CAS, and elemental composition.  
+          Click “View Details” on a card to see full information.
+        </p>
+      </section>
+    </div>
+
+    <div class="section-card">
+      <section>
+        <h2>Detail View</h2>
+        <ul>
+          <li><strong>Basic Info:</strong> Name, CAS, use category, sub-use, applications, elemental composition.</li>
+          <li><strong>Functions:</strong> Technical function, end-use function, service, and performance requirements.</li>
+          <li><strong>Alternatives:</strong> Recommended alternative substance and type.</li>
+          <li><strong>Change in Functionality:</strong> Notes on how functionality may change.</li>
+          <li><strong>Market Uptake:</strong> Adoption status of the alternative.</li>
+          <li><strong>PBT &amp; CLP:</strong> Persistence, bioaccumulation, toxicity assessment, and hazard classification.</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="section-card">
+      <section>
+        <h2>Data Sources</h2>
+        <p>
+          All data is sourced from the ZeroPM Alternative Assessment database.  
+          Raw JSON files are stored in the <code>data/</code> folder for your reference.
+        </p>
+      </section>
+    </div>
+
+    <div class="section-card">
+      <section>
+        <h2>Feedback &amp; Support</h2>
+        <p>
+          For any questions or suggestions, please email us at
+          <a href="mailto:chen.chen14@student.uva.nl">chen.chen14@student.uva.nl</a>.
+        </p>
+      </section>
+    </div>
+    
+    <a href="{{ url_for('dt_index') }}" class="back">&larr; Back to PFAS Database</a>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 PFAS Toolbox</p>
+  </footer>
+</body>
+</html>

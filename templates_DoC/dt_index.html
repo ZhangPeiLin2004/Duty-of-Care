@@ -6,10 +6,30 @@
   <title>PFAS Toolbox</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
-  <header class="header"><h1>PFAS Toolbox</h1></header>
+    <header>
+          <div class="logo">
+            <a href="{{ url_for('index') }}">
+                <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('duty_of_care') }}">Duty Of Care</a></li>
+                <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
+                <li><a href="{{ url_for('toolbox') }}">Toolbox</a></li>
+                <li><a href="{{ url_for('our_community') }}">Our Community</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <div class="page-title">
+      <h1>PFAS Toolbox</h1>
+  </div>
   <aside class="filter-panel">
     <input type="search" id="search" placeholder="🔍 Search by name or CAS..."/>
+    <a href="{{ url_for('guide') }}" class="guide-link">📖 Guide</a>
     <div class="filter-group">
       <label for="category">Use Category</label>
       <select id="category" multiple></select>
