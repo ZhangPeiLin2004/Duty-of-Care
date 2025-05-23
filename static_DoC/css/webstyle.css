@@ -30,7 +30,7 @@ header {
 
 /* Ensure logo stays on the left */
 .logo img {
-    height: 80px;
+    height: 100px;
 }
 
 /* Align navigation items to the right */
@@ -593,7 +593,7 @@ footer {
 }
 
 .footer-logo {
-    width: 60px; /* Adjust as needed */
+    width: 90px; /* Adjust as needed */
     margin-bottom: 10px;
 }
 
@@ -601,6 +601,19 @@ footer {
     font-size: 0.9em;
     color: #B0C4DE;
     margin: 5px 0;
+}
+
+.footer-logo-text {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* spacing between logo and text */
+}
+
+.footer-text p {
+    margin: 3px 0;
+    font-size: 0.9em;
+    color: #B0C4DE;
+    white-space: nowrap;
 }
 
 /* Center Sections: Navigation, Toolbox, Community */
