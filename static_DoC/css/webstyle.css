@@ -240,7 +240,7 @@ nav ul li a {
 }
 
 .story-title {
-    flex: 1;
+    flex: 20; /* Adjust the height of each title */
     display: flex;
     align-items: center;
     padding: 15px;
@@ -255,7 +255,7 @@ nav ul li a {
     border-bottom: none; /* Removes the last divider */
 }
 .story-title:hover {
-    color: #00e1ff;
+    color: #31537d;
 }
 
 /* Right Side: Changing Image & Text */
@@ -334,8 +334,9 @@ nav ul li a {
 }
 
 .find-out-more:hover {
-    background-color: #00e1ff;
+    background-color: #31537d;
 }
+
 
 /*#############################################################################################*/
 /* Quote from Jobian */
