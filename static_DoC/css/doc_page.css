@@ -86,6 +86,8 @@ nav ul li a {
   margin-bottom: 0.75rem;
   color: #000;
   line-height: 1.6;
+  font-size: 1rem;
+
 }
 
 .step strong {
@@ -149,17 +151,17 @@ nav ul li a {
  
   .text{
     font-family: 'Trebuchet MS', sans-serif;
-    font-size: 1em;
     color: #000000;
-    padding: 0 5%;
+    padding: 0 15%;
     margin-top: 20px; /* To ensure text doesn't overlap with the fixed header */
   }
   .text h1{
     color: #274C77;
-    font-size: 2rem;
+    font-size: 2em;
   }
   .text p{
     text-align: justify;
+    font-size: 1.1em;
   
   }
 
@@ -167,7 +169,7 @@ nav ul li a {
     color: #274C77;
     margin-bottom: 30px;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
   .text h5{
     text-align: center;
@@ -180,10 +182,11 @@ nav ul li a {
   .section {
     font-family: 'Trebuchet MS', sans-serif;
 
-    padding: 0 5%;
+    padding: 0 15%;
     position: relative;
-    margin: 60px 0;
+    margin: 50px 0;
     color: #274C77;
+    margin-bottom: 0%;
   }
   
   .section h2 {
@@ -194,18 +197,15 @@ nav ul li a {
   }
   .section p {
     color: #000000;
+    font-size: 1.2rem;
+    text-align: justify;
   }
   .section ul {
     list-style: none;
     padding-left: 0;
     color: #000000;
   }
-  .overview {
-    background-color: #e6e5ec;
-    padding: 2rem 5%;
-    margin: 2rem 0
 
-  }
   
 .full-image {
     height: 300px;
@@ -328,7 +328,12 @@ nav ul li a {
   }
 
   .framework-steps {
-    margin-top: 1rem;
+    margin-top: 0;
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   .step {
