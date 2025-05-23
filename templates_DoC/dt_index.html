@@ -29,27 +29,13 @@
   </div>
   <aside class="filter-panel">
     <input type="search" id="search" placeholder="🔍 Search by name or CAS..."/>
-    <a href="{{ url_for('guide') }}" class="guide-link">📖 Guide</a>
-    <div class="filter-group">
-      <label for="category">Use Category</label>
-      <select id="category" multiple></select>
-    </div>
-    <div class="filter-group">
-      <label for="sub-use">Sub-Use</label>
-      <select id="sub-use" multiple></select>
-    </div>
-    <div class="filter-group">
-      <label for="applications">Applications</label>
-      <select id="applications" multiple></select>
-    </div>
-    <div class="filter-group">
-      <label for="pbt">PBT Assessment</label>
-      <select id="pbt" multiple></select>
-    </div>
-    <div class="filter-group">
-      <label for="clp">CLP Classification</label>
-      <select id="clp" multiple></select>
-    </div>
+    <a href="{{url_for ('guide')}}" class="guide-link">📖 Guide</a>
+    <div class="filter-group"><label for="category">Use Category</label><select id="category" multiple></select></div>
+    <div class="filter-group"><label for="sub-use">Sub-Use</label><select id="sub-use" multiple></select></div>
+    <div class="filter-group"><label for="applications">Applications</label><select id="applications" multiple></select></div>
+    <button id="clear-filters" class="clear-btn">Clear All Filters</button>
+    <div id="active-filters" class="active-filters"></div>
+  </aside>
     <div id="active-filters" class="active-filters"></div>
   </aside>
   <main class="card-grid"></main>
