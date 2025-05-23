@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
+     <header>
+        <div class="logo">
+            <a href="{{ url_for('index') }}">
+                <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('duty_of_care') }}">Duty Of Care</a></li>
+                <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
+                <li><a href="{{ url_for('toolbox') }}">Toolbox</a></li>
+                <li><a href="{{ url_for('certification') }}">Certifications</a></li>
+                <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+            </ul>
+        </nav>
+     </header>
+     
 <section class="about-us-section">
             <div class="about-us-container">
                 <h2 class="about-us-heading">About Us</h2>
