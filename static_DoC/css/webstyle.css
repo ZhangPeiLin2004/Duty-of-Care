@@ -30,7 +30,7 @@ header {
 
 /* Ensure logo stays on the left */
 .logo img {
-    height: 40px;
+    height: 80px;
 }
 
 /* Align navigation items to the right */
@@ -576,7 +576,7 @@ nav ul li a {
 footer {
     background-color: #24436E;
     color: white;
-    padding: 30px;
+    padding: 15px 30px;
 }
 
 .footer-container {
@@ -593,7 +593,7 @@ footer {
 }
 
 .footer-logo {
-    width: 120px; /* Adjust as needed */
+    width: 60px; /* Adjust as needed */
     margin-bottom: 10px;
 }
 
