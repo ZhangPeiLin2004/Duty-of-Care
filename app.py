@@ -45,6 +45,10 @@ def story1():
 def dt_index():
     return render_template("dt_index.html")
 
+@app.route("/guide")
+def guide():
+    return render_template("guide.html")
+
 # Serve images from /images_DoC/
 @app.route('/images_DoC/<path:filename>')
 def serve_images(filename):
@@ -95,7 +99,7 @@ FILTERS = {
         'Settling tank dortmund tank', 'Physical chemical containers', 'Static mixers', 'Dynamic mixers',
         'Flocculator', 'Dosing Systems', 'Polymer preparation units', 'Dissolved air flotation units',
         'Lamella Settlers', 'De-Acidification, remineralisation and PH increase of Water',
-        'Seeding material for crystallisation softening proces'
+        'Seeding material for crystallisation softening proces', 'Fluor-Mop'
     ],
     'Biological Treatment': [
         'Aerobic Biological Treatment', 'BODAC', 'Effluent polishing equipment',

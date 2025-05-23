@@ -26,6 +26,7 @@
         </nav>
     </header>
     <aside class="contents-box">
+      <button class="toggle-arrow">→</button>
         <h3>CONTENTS</h3>
         <ol>
           <li><a href="#duty">Duty of Care</a>
@@ -41,6 +42,10 @@
             </ol>
           </li>
           <li><a href="#decision">Decision Tree</a></li>
+          <ol type="a">
+            <li><a href="#section1">Understanding your company's PFAS use</a></li>
+            <li><a href="#first-steps">Your first steps</a></li>
+
         </ol>
       </aside>
     
@@ -78,76 +83,289 @@
         <section id="decision" class="section full-image" style="background-image: url('../static_DoC/images_DoC/decision_tree.png');">
           <h2>Decision Tree</h2>
         </section>
-<<<<<<< HEAD
+        <section class="text">
+            <h5>Use the quiz below to help you understand what your next steps are.</h5>
+        </section>
+       
 
 <!-- Precontemplation Section -->
-=======
-                <!-- Precontemplation Section -->
->>>>>>> e4e794719e30fc7423650146ebe407a6ffe53e61
-        <section class="section" id="precontemplation">
-            <h2>Stage 1: Becoming Aware</h2>
-            <p>Many companies are not yet fully aware of how or where PFAS is used in their operations—or what the risks are. This section helps you better understand the issue and reflect on your role.</p>
-
-            <div class="awareness-question">
-                <h3>Do you know how PFAS is used in your company?</h3>
-                <button>Yes</button>
-                <button>No</button>
+    <section class="section" id="decision-tree">
+            <div class="decision-section" id="section1">
+                <h3>Section 1: Understanding your company's PFAS use</h3>
+                <p>Goal: Surface unacknowledged risks, challenge inertia, and introduce urgency.</p>
+                
+                <p class="intro-text">PFAS (per- and polyfluoroalkyl substances) are used in everything from textiles to semiconductors. They're also known as 'forever chemicals' — they do not break down naturally and accumulate in water, soil, and our bodies.</p>
+                
+                <div class="question-container">
+                    <h4>1. Have you identified any PFAS use in your company's supply chain, manufacturing, or products?</h4>
+                    <div class="options">
+                        <button class="option-btn" data-next="q2">Yes</button>
+                        <button class="option-btn" data-next="q2b">No</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="info-box">
-                <h4>Let’s start by understanding what PFAS is and why it matters.</h4>
-                <ul>
-                    <li><strong>What are PFAS?</strong> A group of man-made chemicals used for water, oil, and heat resistance.</li>
-                    <li><strong>Why is this a problem?</strong> PFAS persist in the environment and in human bodies, causing health risks.</li>
-                    <li><strong>Where are they used?</strong> Products like coatings, packaging, wires, textiles, and electronics.</li>
+            <div class="decision-section hidden" id="q2">
+                <h4>2. Do you know what PFAS are and their effects and risks?</h4>
+                <div class="options">
+                    <button class="option-btn" data-next="q3">Yes</button>
+                    <button class="option-btn" data-next="resources">Yes, and I want to learn more</button>
+                    <button class="option-btn" data-next="resources">No</button>
+                </div>
+            </div>
+
+            <div class="decision-section hidden" id="resources">
+                <h4>Here are some resources to inform yourself:</h4>
+                <div class="resources">
+                    <div class="resource-item">
+                        <h5>Detailed Video by Bloomberg</h5>
+                        <p>Exploring the widespread contamination caused by PFAS and its environmental and health impacts.</p>
+                        <a href="https://youtu.be/t8qGtEVh7oQ?si=htYvEALG3P1K-w3n" target="_blank">Watch Video</a>
+                    </div>
+                    <div class="resource-item">
+                        <h5>UC Davis Report Overview</h5>
+                        <p>Quick overview of PFAS and its implications.</p>
+                        <a href="https://edition.pagesuite-professional.co.uk/html5/reader/production/default.aspx?pubname=&edid=f2856496-3b7f-4113-8461-af5d282d8066" target="_blank">Read Report</a>
+                    </div>
+                </div>
+                <button class="continue-btn" data-next="q3">Continue to Next Question</button>
+            </div>
+
+            <div class="decision-section hidden" id="q3">
+                <h4>3. Does your organization understand who bears the cost of your PFAS use?</h4>
+                <div class="options">
+                    <button class="option-btn" data-next="q4">Yes</button>
+                    <button class="option-btn" data-next="cost-examples">No</button>
+                </div>
+            </div>
+
+            <div class="decision-section hidden" id="cost-examples">
+                <h4>Examples of Who Could Be Bearing the Cost:</h4>
+                <ul class="cost-list">
+                    <li>Local communities near production plants</li>
+                    <li>Workers exposed during manufacturing</li>
+                    <li>Children and future generations</li>
+                    <li>Global ecosystems</li>
                 </ul>
+                <div class="framework-option">
+                    <h5>Would you like a framework to better understand this?</h5>
+                    <div class="options">
+                        <button class="option-btn" data-next="q4">No</button>
+                        <button class="option-btn" data-next="framework">Yes</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="reflection-box">
-                <h4>What role does your company want to play?</h4>
-                <p>Reducing PFAS use isn’t just a regulatory issue — it’s about caring for public health, the environment, and future generations. As a company, you have a duty of care: to act responsibly and transparently when your actions may have harmful impacts.</p>
+            <div class="decision-section hidden" id="framework">
+                <h4>Framework for Assessing PFAS Impact</h4>
+                <div class="framework-steps">
+                    <div class="step">
+                        <h5>1. Where in your supply chain are PFAS used?</h5>
+                        <p><b>Examples:</b> coatings, manufacturing tools, water-repellent treatments</p>
+                        <p><b>Suggestion:</b> Begin with an inventory of products containing PFAS</p>
+                    </div>
+                    <div class="step">
+                        <h5>2. How is the PFAS being released?</h5>
+                        <p>Into watersystems? Air? Waste stream?</p>
+                    </div>
+                    <div class="step">
+                        <h5>3. Identify who is being impacted</h5>
+                        <ul>
+                            <li><b>Local communities:</b> Are any located near where PFAS might be discharged?</li>
+                            <li><b>Workers:</b> Are employees exposed during handling or disposal?</li>
+                            <li><b>End users:</b> Will customers be exposed?</li>
+                            <li><b>Future generations:</b> What long-term risks are created?</li>
+                            <li><b>Ecosystems:</b> Are rivers, groundwater, or wildlife potentially affected?</li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="continue-btn" data-next="q4">Continue to Next Question</button>
             </div>
 
-            <div class="next-button">
-                <a href="#contemplation">I want to learn what we can do →</a>
+            <div class="decision-section hidden" id="q4">
+                <h4>4. Is your company currently tracking or reporting PFAS-related risks to investors, regulators, or consumers?</h4>
+                <div class="options">
+                    <button class="option-btn" data-next="q5">Yes</button>
+                    <button class="option-btn" data-next="tracking-suggestions">No</button>
+                </div>
             </div>
+
+            <div class="decision-section hidden" id="tracking-suggestions">
+                <h4>Suggestions for Getting Started:</h4>
+                <ul class="suggestions-list">
+                    <li>Begin a PFAS Screening Audit</li>
+                    <li>Review internal product specifications and supplier disclosures</li>
+                    <li>Use publicly available tools (e.g., EPA's PFAS lists, NGO watchlists)</li>
+                </ul>
+                <button class="continue-btn" data-next="q5">Continue to Next Question</button>
+            </div>
+
+            <div class="decision-section hidden" id="q5">
+                <h4>5. If no action is taken, could your company face litigation, product recalls, or loss of customer trust related to PFAS?</h4>
+                <div class="options">
+                    <button class="option-btn" data-next="litigation-info">Yes</button>
+                    <button class="option-btn" data-next="litigation-info">No</button>
+                </div>
+            </div>
+
+            <div class="decision-section hidden" id="litigation-info">
+                <h3>Important Note:</h3>
+                <p>The answer is always <b>YES</b>, until you stop using PFAS completely!</p>
+                <p>Even if your company has not yet encountered legal claims or public scrutiny over PFAS, the risk is real and growing.</p>
+                <p class="legal-text">This is where duty of care becomes critical. In legal terms, duty of care is the responsibility an organization holds to prevent foreseeable harm. Courts are increasingly recognizing that companies must not only respond to known risks, but also anticipate and mitigate emerging threats — especially those with mounting scientific, regulatory, and societal concern, like PFAS.</p>
+                <p class="consequences">If your company fails to act despite mounting evidence — or continues using PFAS without exploring safer alternatives — it may be argued that you breached your duty of care. This breach can form the basis for:</p>
+                <ul class="consequences-list">
+                    <li>Lawsuits from customers, employees, or downstream businesses</li>
+                    <li>Product recalls or bans under expanding chemical safety laws</li>
+                    <li>Damage to brand trust, shareholder confidence, and customer loyalty</li>
+                </ul>
+                <p class="final-note">Even companies that did not intentionally cause harm can be held liable if they ignored clear warnings or failed to pursue reasonable precautions. Courts and regulators ask:</p>
+                <blockquote>"Did the company take steps that a reasonable organization in its position <b>should</b> have taken?"</blockquote>
+                <p class="action-note">By taking even small steps now — such as evaluating PFAS use, exploring alternatives, or engaging suppliers — your company demonstrates proactive care and responsible governance. This not only reduces legal exposure but strengthens your standing with customers, investors, and regulators alike.</p>
+                <p class="warning">Inaction IS negligence.</p>
+                <div class="options">
+                    <button class="option-btn" data-next="section2">I am ready to know what more I can do</button>
+                </div>
+            </div>
+            <div class="decision-section hidden" id="section2">
+                <h3>Section 2: Your first steps</h3>
+                <p>Goal: Help companies understand the benefits of reducing PFAS, feel motivated and capable of making changes, and take small, concrete first steps.</p>
+                
+                <p class="intro-text">Reducing PFAS isn’t just the right thing to do — it’s also smart business.</p>
+
+                <div class="question-container">
+                    <h4>1. What’s in it for you?</h4>
+                    <p>Other than avoiding litigation, there are many benefits to beginning phasing-out PFAS now:</p>
+                    <ul class="suggestions-list">
+                        <li>Get ahead of incoming PFAS bans and restrictions</li>
+                        <li>Improve brand reputation and public trust</li>
+                        <li>Respond to growing investor and customer pressure</li>
+                        <li>Reduce legal and environmental risks</li>
+                        <li>Improve workplace safety and attract sustainability-minded talent</li>
+                        <li>Join a pioneering community of responsible innovators</li>
+                    </ul>
+                    <button class="option-btn" data-next="q2-1">That sounds promising — show me what we can do next</button>
+                </div>
+            </div>
+            <div class="decision-section hidden" id="q2-1">
+                    <div class="question-container">
+                        <p class="intro-text">You don’t need to overhaul your whole company overnight. Many companies begin with just one product, one process, or one pilot</p>
+                        
+                        <h4>2. Have you already done any of the following?</h4>
+                        <div class="suggestions-list">
+                            <ul>
+                                <li> Started tracking where PFAS is used?</li>
+                                <li> Talked internally about PFAS alternatives?</li>
+                                <li> Explored our alternatives or removal databases?</li>
+                                <li> Spoken with suppliers about low- or no-PFAS options?</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="options">
+                            <button class="option-btn" data-next="q2-2">Yes</button>
+                            <button class="option-btn" data-next="q2-2-no">No</button>
+                        </div>
+                    </div>
+              </div>
+                    <div class="decision-section hidden" id="q2-2-no">
+                      <div class="question-container">
+                        <p>That’s okay. The most important thing is being open to change. Let’s explore some easy first actions:</p>
+                        <ul class="suggestions-list">
+                            <li>Identify one product line or process to review for PFAS use</li>
+                            <li>Contact one supplier to ask about PFAS-free alternatives</li>
+                            <li>Explore our <a href="#toolbox">PFAS Alternatives Database</a> by application or sector</li>
+                            <li>Follow a company on our <a href="#effective-efforts">Effective Efforts</a> page to see real-life inspiration</li>
+                        </ul>
+                        <button class="continue-btn" data-next="q2-2">Continue to next question</button>
+                      </div>
+                    </div>
+
+                <div class="decision-section hidden" id="q2-2">
+                    <div class="question-container">
+                        <p class="intro-text">You're not alone. Companies across Europe are already phasing out PFAS — not because they have to, but because they believe in a better way of doing business.</p>
+                        
+                        <h4>3. Are there voices within the company already raising concern or curiosity about PFAS?</h4>
+                        <div class="options">
+                            <button class="option-btn" data-next="q2-3">Yes</button>
+                            <button class="option-btn" data-next="q2-3-no">No</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="decision-section hidden" id="q2-3-no">
+                  <div class="question-container">
+                        <p>Share this website with them to help them understand how becoming PFAS free is of most importance and a future business strategy.</p>
+                        
+                        <h4>Why is it important?</h4>
+                        <p>Even if your company has not yet encountered legal claims or public scrutiny over PFAS, the risk is real and growing.</p>
+                        
+                        <h4>How is it a business strategy?</h4>
+                        <h5><b>Going PFAS-Free: A Strategic Business Move That Reshapes Industry Norms</b></h5>
+                        <p>Phasing out PFAS is not just a compliance or environmental issue — it is a strategic business decision with far-reaching implications. By demonstrating that your company can reduce or eliminate PFAS while maintaining quality, profitability, and innovation, you position yourself as a leader in responsible industry practice.</p>
+                        
+                        <p>Importantly, this leadership creates legal and market leverage:</p>
+                        <ul class="strategy-list">
+                            <li>You set the benchmark for what is “reasonably possible.” Courts and regulators use the actions of peers to determine whether a company has met its duty of care. If your organization proves it is possible to operate with less or no PFAS, you raise the bar across the sector. Competitors who continue business as usual may no longer claim that phasing out PFAS is infeasible — because you’ve shown it can be done.</li>
+                            <li>You shape the narrative of accountability. Public perception and legal risk increasingly center on which companies took initiative — and which waited to be forced. Early action strengthens your credibility and reduces your exposure to lawsuits, reputational damage, or investor withdrawal.</li>
+                            <li>You build trust with customers, employees, and regulators. A proactive PFAS strategy shows that your company is not merely reacting to crisis, but thinking ahead. This empowers stakeholders to align with your brand, knowing they are choosing safety, sustainability, and leadership.</li>
+                            <li>You gain early access to growing PFAS-free markets. As more consumers, retailers, and governments set PFAS restrictions, demand is shifting. Companies that are prepared can capture market share, meet certifications, and unlock new partnerships where others lag behind.</li>
+                        </ul>
+                        
+                        <p>In short, eliminating PFAS isn't just about risk — it’s about competitive advantage. Your company's initiative doesn’t just protect your future — it helps shape what the future of your industry will be.</p>
+                        
+                        <button class="continue-btn" data-next="q2-5">Continue to next question</button>
+                
+                  </div>
+                </div>
+
+                <div class="decision-section hidden" id="q2-4">
+                  <div class="question-container">
+                        <p>Even if your company has not yet encountered legal claims or public scrutiny over PFAS, the risk is real and growing.</p>
+                        <h4>4. Could addressing PFAS now offer a competitive advantage in your sector?</h4>
+                        <div class="options">
+                            <button class="option-btn" data-next="q2-5">Yes</button>
+                            <button class="option-btn" data-next="q2-5">No</button>
+                        </div>
+                  </div>
+                </div>
+
+                <div class="decision-section hidden" id="q2-5">
+                  <div class="question-container">
+                    <h3>Perfect, your company is now ready to begin taking action!</h3>
+                        <button class="continue-btn" data-next="section1">Go back to section 1</button>
+                        <button class="continue-btn" data-next="section2">Go back to section 2</button>
+                  
+                  </div>
+                </div>   
+    </section>
+     
+        <section class="text", id="first-steps">
+            <h1>You're Done — Now What?</h1>
+            <p>Every company must assess whether it is doing everything it reasonably can to protect people, the environment, and its own future. Courts, customers, and communities are watching. The steps you take now will shape your legal exposure, your public credibility, and your ability to stay ahead of regulatory and reputational risk.</p>
+            <h4>Choosing to act isn’t just responsible — it’s strategic.</h4>
+            <h1>Next Steps to Consider</h1>
+            <ul>
+                <li><b>Get clarity.</b> Map where PFAS may be present in your supply chain, operations, or products.</li>
+                <li><b>Start conversations.</b> Bring PFAS risk and alternatives into leadership, procurement, and compliance discussions.</li>
+                <li>
+                    <b>Design a path forward.</b> Download the
+                    <a href="../static_DoC/files/PFAS_Action_Plan.docx" download>
+                         PFAS Phase-Out Action Plan Template
+                    </a>
+                    to begin outlining a strategy — even if it starts small.
+                </li>
+                <li><b>Build momentum.</b> Set internal milestones and identify early wins. Small actions today prevent larger liabilities tomorrow.</li>
+            </ul>
+            <h1>Lead the shift</h1>
+            <p>Going PFAS-free proves what is possible.
+            It shows that better is not only necessary — it’s achievable.
+            By moving first, your company doesn’t just reduce risk — you raise the standard for your industry.
+            You don’t have to do everything now. But you can start.</p>
+            <h4>Join the PFAS Pioneers</h4>
+            <h5>We are a community of companies committed to phasing out PFAS. We share resources, strategies, and support to help each other succeed.</h5>
         </section>
-        <section id="contemplation" class="section">
-          <h2>Stage 2: Contemplation — Seeing the Benefit</h2>
-          <p>At this stage, your company is aware of PFAS-related risks and is beginning to consider the benefits of eliminating them. This is the moment to build confidence and encourage motivation for real change.</p>
-          
-          <h3>Why Take Action?</h3>
-          <ul>
-            <li><strong>Brand Reputation:</strong> Being PFAS-free sets your company apart as a sustainability leader.</li>
-            <li><strong>Market Advantage:</strong> Consumers and clients increasingly demand non-toxic, responsible products.</li>
-            <li><strong>Regulatory Readiness:</strong> Proactive adaptation protects you from future legal and environmental liabilities.</li>
-          </ul>
-
-          <h3>Techniques Used in This Stage:</h3>
-          <ul>
-            <li><strong>Dramatic Relief:</strong> Understand the emotional and ethical weight of PFAS-related harm through case studies and testimonies.</li>
-            <li><strong>Social Liberation:</strong> See how other businesses in your industry are making this change — and thriving.</li>
-            <li><strong>Self-Reevaluation:</strong> Reflect on how this shift aligns with your company’s mission and long-term values.</li>
-          </ul>
-
-          <h3>First Practical Steps:</h3>
-          <ul>
-            <li>Start an internal discussion about PFAS and its risks — awareness is contagious.</li>
-            <li>Explore alternatives: What safer materials or suppliers are already available to you?</li>
-            <li>Identify a product, process, or packaging element that could serve as a PFAS-free pilot.</li>
-          </ul>
-
-<<<<<<< HEAD
-          <p>Not sure how to begin? <a href="{{ url_for('toolbox') }}">Visit the Toolbox</a> for ideas, case studies, and contacts.</p>
-        </section>
-
-=======
-          <p>Not sure how to begin? <a href="#toolbox">Visit the Toolbox</a> for ideas, case studies, and contacts.</p>
-        </section>
 
 
-
->>>>>>> e4e794719e30fc7423650146ebe407a6ffe53e61
       </main>
     
 
@@ -192,5 +410,68 @@
         </div>
     </div>
 </footer>
+<script>
+    // Contents Box Toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const contentsBox = document.querySelector('.contents-box');
+    const toggleArrow = document.querySelector('.toggle-arrow');
+    
+    toggleArrow.addEventListener('click', () => {
+      contentsBox.classList.toggle('collapsed');
+      toggleArrow.textContent = contentsBox.classList.contains('collapsed') ? '→' : '←';
+    });
+  });
+
+        // Decision Tree Navigation
+        const decisionTree = {
+            initialize: function() {
+                // Add click handlers to all option buttons
+                document.querySelectorAll('.option-btn').forEach(button => {
+                    button.addEventListener('click', () => this.handleOptionClick(button));
+                });
+
+                // Add click handlers to continue buttons
+                document.querySelectorAll('.continue-btn').forEach(button => {
+                    button.addEventListener('click', () => this.handleContinueClick(button));
+                });
+
+                // Show the first section
+                document.getElementById('section1').classList.remove('hidden');
+            },
+
+            handleOptionClick: function(button) {
+                // Hide current section
+                const currentSection = button.closest('.decision-section');
+                currentSection.classList.add('hidden');
+
+                // Show next section based on button's data-next attribute
+                const nextSectionId = button.dataset.next;
+                const nextSection = document.getElementById(nextSectionId);
+                if (nextSection) {
+                    nextSection.classList.remove('hidden');
+                }
+            },
+
+            handleContinueClick: function(button) {
+                // Hide current section
+                const currentSection = button.closest('.decision-section');
+                currentSection.classList.add('hidden');
+
+                // Show next section based on button's data-next attribute
+                const nextSectionId = button.dataset.next;
+                const nextSection = document.getElementById(nextSectionId);
+                if (nextSection) {
+                    nextSection.classList.remove('hidden');
+                }
+            }
+        };
+
+        // Initialize the decision tree when the page loads
+    document.addEventListener('DOMContentLoaded', () => {
+    decisionTree.initialize();
+});
+
+
+    </script>
 </body>
 </html>

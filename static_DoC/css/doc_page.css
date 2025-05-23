@@ -33,6 +33,7 @@ header {
     height: 40px;
 }
 
+
 /* Align navigation items to the right */
 nav {
     flex-grow: 1;
@@ -69,32 +70,91 @@ nav ul li a {
   .contents-box {
     position: fixed;
     top: 150px;
-    right: 20px;
-    width: 250;
+    right: 0;
+    width: 250px;
     background-color: #e6e5ec;
     padding: 20px;
     border-radius: 5px;
     font-size: 0.9em;
     z-index: 900;
+    transition: transform 0.3s ease-in-out;
   }
-  
+
+  .contents-box.collapsed {
+    transform: translateX(100%);
+  }
+
   .contents-box h3 {
     color: #274C77;
     margin-top: 0;
+    margin-bottom: 1rem;
   }
-  
+
   .contents-box a {
     text-decoration: none;
     color: #274C77;
   }
-  
+
   .contents-box a:hover {
     text-decoration: underline;
   }
-  
-  .section {
 
-    padding: 2rem 5%;
+  .toggle-arrow {
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #e6e5ec;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 901;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .toggle-arrow:hover {
+    background-color: #274C77;
+    color: white;
+  }
+
+  .contents-box.collapsed .toggle-arrow {
+    transform: translateY(-50%) rotate(180deg);
+  }
+ 
+  .text{
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    color: #000000;
+    padding: 0 5%;
+    margin-top: 20px; /* To ensure text doesn't overlap with the fixed header */
+  }
+  .text h1{
+    color: #274C77;
+    font-size: 2rem;
+  }
+  .text p{
+    text-align: justify;
+  
+  }
+
+  .text h4{
+    color: #274C77;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  .text h5{
+    text-align: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    color: #000000;
+    padding: 0 5%;
+    margin-top: 20px;
+  }
+  .section {
+    font-family: 'Trebuchet MS', sans-serif;
+
+    padding: 0 5%;
     position: relative;
     margin: 60px 0;
     color: #274C77;
@@ -103,7 +163,17 @@ nav ul li a {
   .section h2 {
     color: #274C77;
   }
-  
+  .section h3 {
+    color: #274C77;
+  }
+  .section p {
+    color: #000000;
+  }
+  .section ul {
+    list-style: none;
+    padding-left: 0;
+    color: #000000;
+  }
   .overview {
     background-color: #e6e5ec;
     padding: 2rem 5%;
@@ -149,7 +219,186 @@ nav ul li a {
     min-width: 150px;
   }
 
+  /* Decision Tree Styles */
+  .decision-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+  }
 
+  .decision-section.hidden {
+    display: none;
+  }
+.hidden {
+  display: none;
+}
+  .question-container {
+    margin: 1rem 0;
+  }
+
+  .options {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .option-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #274C77;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .option-btn:hover {
+    background-color: #1a355d;
+  }
+
+  .resources {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .resource-item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .resource-item h5 {
+    color: #274C77;
+    margin-bottom: 0.5rem;
+  }
+
+  .resource-item a {
+    color: #274C77;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .resource-item a:hover {
+    text-decoration: underline;
+  }
+
+  .cost-list, .suggestions-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .cost-list li, .suggestions-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .cost-list li:last-child, .suggestions-list li:last-child {
+    border-bottom: none;
+  }
+
+  .framework-steps {
+    margin-top: 1rem;
+  }
+
+  .step {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .step h5 {
+    color: #274C77;
+    margin-bottom: 0.5rem;
+  }
+
+  .continue-btn {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #274C77;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .continue-btn:hover {
+    background-color: #1a355d;
+  }
+
+  .legal-text {
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  .consequences-list {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .consequences-list li {
+    margin-bottom: 0.5rem;
+  }
+
+  .action-note {
+    margin-top: 1.5rem;
+    color: #274C77;
+    font-weight: 500;
+  }
+
+  .warning {
+    color: #dc3545;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-align: center;
+  }
+/* Section 2 Specific Styles */
+
+  .checklist ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .checklist li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .checklist input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  .action-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 1rem 0;
+  }
+
+  .action-list li {
+    margin-bottom: 0.5rem;
+  }
+
+  .strategy-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+
+  .strategy-list li {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
 /*#############################################################################################*/
 /* Footer */
 /*#############################################################################################*/

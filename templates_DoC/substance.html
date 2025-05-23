@@ -7,6 +7,23 @@
   <link rel="stylesheet" href="../static_DoC/css/style.css"/>
 </head>
 <body>
+  <header>
+    <!-- Logo is outside of the nav container -->
+    <div class="logo">
+        <a href="{{ url_for('index') }}">
+            <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('duty_of_care') }}">Duty Of Care</a></li>
+            <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
+            <li><a href="{{ url_for('toolbox') }}">Toolbox</a></li>
+            <li><a href="{{ url_for('our_community') }}">Our Community</a></li>
+        </ul>
+    </nav>
+  </header>
+
 <header class="header"><h1>PFAS Toolbox</h1></header>
 <main class="detail">
   <h2 id="name"></h2>
