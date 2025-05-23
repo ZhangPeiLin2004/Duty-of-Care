@@ -67,9 +67,9 @@ nav ul li a {
     position: relative;
     width: 100vw; /* Full width */
     height: 100vh; /* Full height of the viewport */
-    background: url('../images_DoC/freshwater_glass.png') no-repeat;
+    background: url('../images_DoC/Factory_Waters.webp') no-repeat;
     background-size: cover; /* Ensures the background image covers the whole screen */
-    background-position: -750px center; /* Shifts the image 100px to the left */
+    background-position: center -100px; /* Moves the image 100px up */
     display: flex;
     align-items: center;
     justify-content: flex-start;
