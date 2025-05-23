@@ -69,7 +69,7 @@ nav ul li a {
     height: 100vh; /* Full height of the viewport */
     background: url('../images_DoC/Factory_Waters.webp') no-repeat;
     background-size: cover; /* Ensures the background image covers the whole screen */
-    background-position: center -100px; /* Moves the image 100px up */
+    background-position: center -50px; /* Moves the image 100px up */
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -143,53 +143,70 @@ nav ul li a {
 /* Infograph */
 /*#############################################################################################*/
 .infographic-section {
-    background-color: #ffffff;
-    padding: 60px 20px;
+    background: #ffffff;
+    padding: 80px 20px;
     text-align: center;
-    font-family: 'Arial', sans-serif;
-}
-
-.section-title {
-    font-size: 1.75rem;
-    color: #5c5c5c;
-    font-weight: bold;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
 .infographic-grid {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
-    max-width: 1000px;
+    align-items: stretch;
+    gap: 0;
+    max-width: 1200px;
     margin: 0 auto;
+    border-left: 1px solid #ccc; /* First line */
+    border-right: 1px solid #ccc;
 }
 
 .infographic-card {
-    flex: 1 1 250px;
-    max-width: 280px;
-    background-color: #ffffff;
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px;
+    flex: 1;
+    padding: 30px 20px;
+    border-right: 1px solid #ccc;
 }
 
-.infographic-card h3 {
-    font-size: 2rem;
+.infographic-card:last-child {
+    border-right: none;
+}
+
+.info-icon {
+    display: inline-block;
+    color: #1d3557;
+    margin-bottom: 20px;
+}
+
+.info-number {
+    font-size: 2.2rem;
     color: #31537d;
-    margin-bottom: 10px;
-    font-weight: bold;
+    font-weight: 800;
+    margin: 10px 0;
 }
 
-.infographic-card p {
+.info-description {
     font-size: 1rem;
-    color: #000000;
-    margin: 0;
+    color: #333;
     line-height: 1.5;
-    font-weight: 600;
+    font-weight: 500;
 }
+
+/* Optional: add spacing and stacking for mobile */
+@media (max-width: 768px) {
+    .infographic-grid {
+        flex-direction: column;
+        border-left: none;
+    }
+
+    .infographic-card {
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .infographic-card:last-child {
+        border-bottom: none;
+    }
+}
+
 
 /*#############################################################################################*/
 /* Effectivefforts Joana Caseiro */
