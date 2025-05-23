@@ -141,6 +141,123 @@ nav ul li a {
 }
 
 /*#############################################################################################*/
+/* Infograph */
+/*#############################################################################################*/
+
+.infographic-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.infographic-section .section-title {
+    font-size: 2rem;
+    color: #31537d;
+    margin-bottom: 40px;
+}
+
+.infographic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.infographic-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.infographic-card h3 {
+    font-size: 1.4rem;
+    color: #31537d;
+    margin-bottom: 15px;
+}
+
+.infographic-card ul {
+    list-style: none;
+    padding: 0;
+    color: #000000;
+    font-size: 1rem;
+}
+
+.infographic-card ul li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.infographic-card strong {
+    color: #31537d;
+}
+
+.infographic-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    background-color: #ffffff;
+}
+
+.infographic-wrapper {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.infographic-card {
+    width: 300px;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Make the additional-info box match the combined width */
+.additional-info {
+    max-width: 640px; /* Matches combined width + gap of 2 cards */
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    color: #000;
+    font-family: Arial, sans-serif;
+    margin: 40px auto 0; /* centers it and adds spacing from the grid above */
+    text-align: left;
+}
+
+
+.additional-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.additional-info ul {
+    padding-left: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.additional-info li {
+    margin-bottom: 0.5rem;
+}
+
+.additional-info p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #000000;
+}
+
+.citation {
+    font-style: italic;
+    color: #000000;
+    font-size: 0.9rem;
+}
+
+
+/*#############################################################################################*/
 /* Effectivefforts Joana Caseiro */
 /*#############################################################################################*/
 .section-title {

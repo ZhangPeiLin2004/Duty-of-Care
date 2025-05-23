@@ -88,7 +88,7 @@ nav ul li a {
 }
 
 .badge {
-    width: 60px;
+    width: 200px;
     height: auto;
     margin-bottom: 10px;
 }
@@ -174,6 +174,11 @@ nav ul li a {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
+
+.orbit-system:hover .orbit-ring {
+    animation-play-state: paused !important;
+}
+
 
 .orbit-ring {
     position: absolute;
@@ -327,38 +332,39 @@ padding: 0 20px;
 /*#############################################################################################*/
 /* Cooperating Companies */
 /*#############################################################################################*/
+
 .swiper-section {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.swiper-slide img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.swiper {
-  width: 60%;
-  height: 120px; /* enough to hold one row of circles */
-  text-align: center;
+.section-heading {
+    font-size: 2.5rem;
+    color: #2d4b71;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.swiper-container {
+  max-width: 1200px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .swiper-wrapper-container {
-    width: 60%;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .swiper-wrapper {
   display: flex;
-  align-items: center;
 }
 
-.swiper-container.swiper-companies {
-    width: 100%;  /* 100% of the .swiper-wrapper-container (which is 60% of page) */
+.swiper-companies {
+  width: 100%;
+  height: 140px;
+  position: relative;
 }
 
 .swiper-slide {
@@ -381,67 +387,71 @@ padding: 0 20px;
   cursor: pointer;
 }
 
+
 /*#############################################################################################*/
 /* Footer */
 /*#############################################################################################*/
 footer {
-background-color: #24436E;
-color: white;
-padding: 30px;
-margin-top: 60px;
+    background-color: #24436E;
+    color: white;
+    padding: 30px 0; /* Only vertical padding */
+    width: 100%;
 }
 
 .footer-container {
-display: flex;
-justify-content: space-between;
-align-items: start;
-max-width: 1200px;
-margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    max-width: 1200px;     /* Keeps content centered and readable */
+    margin: 0 auto;        /* Centers the container */
+    padding: 0 20px;       /* Optional: horizontal padding inside the container */
+    box-sizing: border-box;
 }
+
 
 /* Left section: Logo and text */
 .footer-left {
-max-width: 250px;
+    max-width: 250px;
 }
 
 .footer-logo {
-width: 120px; /* Adjust as needed */
-margin-bottom: 10px;
+    width: 120px; /* Adjust as needed */
+    margin-bottom: 10px;
 }
 
 .footer-left p {
-font-size: 0.9em;
-color: #B0C4DE;
-margin: 5px 0;
+    font-size: 0.9em;
+    color: #B0C4DE;
+    margin: 5px 0;
 }
 
 /* Center Sections: Navigation, Toolbox, Community */
 .footer-sections {
-display: flex;
-gap: 50px;
+    display: flex;
+    gap: 50px;
 }
 
 .footer-column h3 {
-font-size: 1em;
-color: #B0C4DE;
-margin-bottom: 10px;
+    font-size: 1em;
+    color: #B0C4DE;
+    margin-bottom: 10px;
 }
 
 .footer-column ul {
-list-style: none;
-padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .footer-column ul li {
-margin: 5px 0;
+    margin: 5px 0;
 }
 
 .footer-column ul li a {
-text-decoration: none;
-color: white;
-font-size: 0.9em;
+    text-decoration: none;
+    color: white;
+    font-size: 0.9em;
 }
 
 .footer-column ul li a:hover {
-text-decoration: underline;
+    text-decoration: underline;
 }

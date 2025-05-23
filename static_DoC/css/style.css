@@ -1,27 +1,126 @@
-* { margin:0; padding:0; box-sizing:border-box; font-family:Arial,sans-serif; }
-body { display:grid; grid-template-areas: "header header" "filter main" "footer footer"; grid-template-columns:220px 1fr; grid-template-rows:auto 1fr auto; min-height:100vh; }
-.header{grid-area:header;background:#005B96;color:#fff;padding:1rem;text-align:center;}
-.filter-panel{grid-area:filter;background:#f7f7f7;padding:1rem;border-right:1px solid#ddd;overflow:auto;}
-.filter-panel input[type="search"]{width:100%;padding:.5rem 1rem;border:1px solid#ccc;border-radius:20px;margin-bottom:1rem;}
-.filter-group{margin-bottom:1rem;}
-.filter-group label{font-weight:bold;margin-bottom:.25rem;display:block;}
-.filter-group select{width:100%;height:5rem;border:1px solid#ccc;border-radius:4px;}
-.active-filters{margin-top:1rem;}
-.filter-tag{display:inline-block;background:#005B96;color:#fff;padding:.25rem .5rem;border-radius:3px;margin:.25rem;cursor:pointer;}
-.card-grid{grid-area:main;padding:1rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;}
-.card{background:#fff;border:1px solid#ccc;border-radius:8px;padding:1rem;box-shadow:0 2px 4px rgba(0,0,0,0.1);}
-.card--pbt-high{border-color:#D9534F;}
-.card--pbt-med{border-color:#F0AD4E;}
-.badge{display:inline-block;padding:2px 6px;border-radius:4px;font-size:.8rem;margin-right:4px;}
-.badge-pbt{background:#D9534F;color:#fff;}
-.badge-clp{background:#5BC0DE;color:#fff;}
-.detail{grid-area:main;padding:1rem;overflow:auto;}
-.detail h2{margin-bottom:1rem;}
-.detail ul{list-style:none;margin-bottom:1.5rem;}
-.detail section{margin-bottom:1.5rem;}
-.hazard .ghs-icons img{width:40px;margin-right:8px;vertical-align:middle;}
-.alternate-card{border:1px solid #ddd;border-radius:6px;padding:.75rem;margin-bottom:.75rem;}
-.alternate-card h4{margin-bottom:.5rem;}
-.alternate-card p{margin:0.25rem 0;}
-.change-func p,.market-update p{background:#f9f9f9;padding:.75rem;border-radius:4px;}
-.footer{grid-area:footer;background:#005B96;color:#fff;text-align:center;padding:.75rem;}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { display: grid; grid-template-areas: "header header" "filter main" "footer footer"; grid-template-columns: 220px 1fr; grid-template-rows: auto 1fr auto; min-height: 100vh; }
+.header { grid-area: header; background: #005B96; color: #fff; padding: 1rem; text-align: center; }
+.filter-panel { grid-area: filter; background: #f7f7f7; padding: 1rem; border-right: 1px solid #ddd; overflow: auto; }
+.filter-panel input[type="search"] { width: 100%; padding: .5rem 1rem; border: 1px solid #ccc; border-radius: 20px; margin-bottom: 1rem; }
+.filter-group { margin-bottom: 1rem; }
+.filter-group label { font-weight: bold; margin-bottom: .25rem; display: block; }
+.filter-group select { width: 100%; height: 5rem; border: 1px solid #ccc; border-radius: 4px; }
+.filter-panel button#clear-filters { display: block; width: 100%; padding: 0.5rem; margin-bottom: 1rem; background: #005B96; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+.active-filters { margin-top: 1rem; }
+.filter-tag { display: inline-block; background: #005B96; color: #fff; padding: .25rem .5rem; border-radius: 3px; margin: .25rem; cursor: pointer; }
+.card-grid { grid-area: main; padding: 1rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
+.card { background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.detail { grid-area: main; padding: 1rem; overflow: auto; }
+.alternate-card { border: 1px solid #ddd; border-radius: 6px; padding: .75rem; margin-bottom: .75rem; }
+.alternate-card p { margin: 0.25rem 0; }
+.footer { grid-area: footer; background: #005B96; color: #fff; text-align: center; padding: .75rem; }
+.function-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: .75rem;
+  margin-bottom: .75rem;
+  background: #fff;
+}
+.alternate-card {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: .75rem;
+  margin-bottom: .75rem;
+}
+/* ===== Gui
+/* ===== Guide Page Full-Width Override ===== */
+
+/* 重置 html/body */
+html, body {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 让 header 也撑满 */
+.header {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 1rem 2rem !important;
+}
+
+/* Guide 主区域全宽 */
+main.guide {
+  width: 100vw !important;        /* 整个视口宽度 */
+  max-width: 100vw !important;
+  margin: 0 !important;           /* 取消左右外边距 */
+  padding: 2rem 2rem 2rem 2rem !important;
+  box-shadow: none !important;
+  background: none !important;
+  position: relative !important;
+  left: 0 !important;
+}
+
+/* 如果有 wrapper/container，取消其对 main.guide 的限制 */
+.container, .wrapper {
+  width: auto !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* 每个卡片区撑满主区域宽度 */
+.section-card {
+  width: calc(100vw - 4rem) !important; /* 扣除左右 padding */
+  max-width: calc(100vw - 4rem) !important;
+  margin: 0 auto 1rem auto !important;
+}
+
+/* 标题 & 正文 其余样式保持 */
+main.guide h1 {
+  font-size: 2.5rem;
+  color: #005B96;
+  margin-bottom: 1rem;
+}
+main.guide section h2 {
+  font-size: 1.5rem;
+  color: #003f5c;
+  margin-bottom: 0.5rem;
+}
+main.guide p,
+main.guide ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+main.guide ul {
+  padding-left: 1.5rem;
+}
+main.guide a.back {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  background: #005B96;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+
+/* Guide link styling */
+a.guide-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background: #005B96;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* Back link styling */
+a.back {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #005B96;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
