@@ -1,6 +1,7 @@
 .community-section {
     text-align: center;
     padding: 60px 30px;
+    max-width: 2000px;
 }
 
 .community-section h1 {
@@ -88,6 +89,28 @@
     background-color: #f8f8f8;
     padding: 15px;
     border-left: 4px solid #2b4a6f;
+}
+
+.step-link {
+  display: block;
+  width: 100vw;
+  background-color: #ffffff;
+  border-left: 5px solid #274C77;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  color: #274C77;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: 'Trebuchet MS', sans-serif;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 2rem;
+}
+
+.step-link:hover {
+  background-color: #f0f4fa; /* subtle shade */
+  transform: translateY(-2px);
 }
 
 @media (min-width: 768px) {
