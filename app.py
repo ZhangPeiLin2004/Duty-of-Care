@@ -35,7 +35,7 @@ def effective_efforts():
 
 @app.route("/certification.html")
 def certification():
-    return render_template("certification.html")
+    return render_template("certifications.html")
 
 @app.route("/aboutus.html")
 def aboutus():
