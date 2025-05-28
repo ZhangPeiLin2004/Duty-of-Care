@@ -68,8 +68,28 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: black;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
+    padding: 18px 24px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    border-radius: 12px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(49, 83, 125, 0.25); /* More visible shade */
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #31537d;
+    border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
 /* Hero Section with Background Image */
@@ -445,6 +465,19 @@ nav ul li a {
     padding: 40px 20px;
 }
 
+.section-intro{
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 25px;
+    color: #333333;
+    max-width: 700px;
+    line-height: 1.4;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .Certification h1 {
     font-size: 2rem;
     font-family: 'Trebuchet MS', sans-serif;
@@ -573,6 +606,32 @@ nav ul li a {
 }
 
 /*#############################################################################################*/
+/* Cooperating Companies */
+/*#############################################################################################*/
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #31537d;
+}
+
+.logo-carousel {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  padding: 10px;
+}
+
+
+/*#############################################################################################*/
 /* Footer */
 /*#############################################################################################*/
 footer {
@@ -606,6 +665,7 @@ footer {
 }
 
 .footer-logo-text {
+    align-items: center;
     display: flex;
     align-items: flex-start;
     gap: 15px;

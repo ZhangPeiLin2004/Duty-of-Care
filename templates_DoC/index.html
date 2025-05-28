@@ -6,6 +6,8 @@
     <title>PFAS Duty of Care</title>
     <link rel="stylesheet" href="../static_DoC/css/webstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
     <header>
@@ -16,11 +18,20 @@
         </div>
         <nav>
             <ul>
-                <li><a href="{{ url_for('duty_of_care') }}">Duty Of Care</a></li>
-                <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
-                <li><a href="{{ url_for('toolbox') }}">Toolbox</a></li>
-                <li><a href="{{ url_for('certification') }}">Certifications</a></li>
-                <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+                <li><a href="{{ url_for('duty_of_care') }}"
+                    class="{% if request.path == url_for('duty_of_care') %}active{% endif %}">Duty Of Care</a></li>
+
+                <li><a href="{{ url_for('effective_efforts') }}"
+                    class="{% if request.path == url_for('effective_efforts') %}active{% endif %}">Effective Efforts</a></li>
+
+                <li><a href="{{ url_for('toolbox') }}"
+                    class="{% if request.path == url_for('toolbox') %}active{% endif %}">Toolbox</a></li>
+
+                <li><a href="{{ url_for('certification') }}"
+                    class="{% if request.path == url_for('certification') %}active{% endif %}">Certifications</a></li>
+
+                <li><a href="{{ url_for('aboutus') }}"
+                    class="{% if request.path == url_for('aboutus') %}active{% endif %}">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -63,7 +74,7 @@
 <!-- ############################################################################################################### -->
 <!-- Effectivefforts --- code from Joana Caseiro-->
 <!-- ############################################################################################################### -->
-<h2 class="section-title">EFFECTIVE EFFORTS IN THE INDUSTRY</h2>
+<h2 class="section-title">Effective Efforts in the Industry</h2>
 <p class="section-description">
     Leading innovations and practical strategies driving effective PFAS removal solutions in the industry.
 </p>
@@ -113,13 +124,16 @@
 <!-- Our Certification Section -->
 <!-- ############################################################################################################### -->
 <section class="Certification">
-    <h1>OUR CERTIFICATION: PFAS PIONEERS</h1>
+    <h1>Our Certification: PFAS PIONEERS</h1>
+    <p class="section-intro">
+        Certifications for companies' impressive contributions
+    </p>
 
     <div class="cards">
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                    <img src="../static_DoC/images_DoC/stamp_1.png" alt="Contributor Image">
+                    <img src="../static_DoC/images_DoC/engaged_contributor.webp" alt="Contributor Image">
                 </div>
                 <div class="card-back">
                     <h2>Engaged Contributor</h2>
@@ -130,7 +144,7 @@
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                    <img src="../static_DoC/images_DoC/stamp_2.png" alt="Advancement Image">
+                    <img src="../static_DoC/images_DoC/significant_advancement.webp" alt="Advancement Image">
                 </div>
                 <div class="card-back">
                     <h2>Significant Advancement</h2>
@@ -141,7 +155,7 @@
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                    <img src="../static_DoC/images_DoC/stamp_3.png" alt="Leader Image">
+                    <img src="../static_DoC/images_DoC/exemplary_leader.webp" alt="Leader Image">
                 </div>
                 <div class="card-back">
                     <h2>Exemplary Leader</h2>
@@ -167,6 +181,55 @@
 </section>
 
 <!-- ################################################################################################################-->
+<!-- Cooperating Companies -->
+<!-- ############################################################################################################### -->
+<section class="logo-carousel">
+  <h2 class="section-title">Cooperating Companies</h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <!-- Repeat or loop over logos -->
+      {% for i in range(8) %}
+      <div class="swiper-slide">
+        <img src="../static_DoC/images_DoC/significant_advancement.webp" alt="Company Logo" />
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+  const swiper = new Swiper('.mySwiper', {
+    slidesPerView: 4,
+    slidesPerGroup: 4,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    speed: 600,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        slidesPerGroup: 1
+      },
+      640: {
+        slidesPerView: 2,
+        slidesPerGroup: 2
+      },
+      1024: {
+        slidesPerView: 4,
+        slidesPerGroup: 4
+      }
+    }
+  });
+</script>
+
+<!-- ################################################################################################################-->
 <!-- End-of-Page Section -->
 <!-- ############################################################################################################### -->
 <footer>
@@ -177,7 +240,7 @@
                 <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo" class="footer-logo">
                 <div class="footer-text">
                     <p>Contact Us: +31 6 81231059</p>
-                    <p>PFAS Trust</p>
+                    <p>PFAS Pioneers</p>
                 </div>
             </div>
         </div>
@@ -201,6 +264,12 @@
             </div>
             <div class="footer-column">
                 <h3>Certifications</h3>
+                <ul>
+                    <li><a href="{{ url_for('certifications') }}">Join</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>About Us</h3>
                 <ul>
                     <li><a href="#">Join</a></li>
                     <li><a href="#">Certified Contributors</a></li>

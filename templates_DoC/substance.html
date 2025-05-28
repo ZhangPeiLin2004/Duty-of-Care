@@ -14,15 +14,24 @@
             <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo">
         </a>
     </div>
-    <nav>
-        <ul>
-                <li><a href="{{ url_for('duty_of_care') }}">Duty Of Care</a></li>
-                <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
-                <li><a href="{{ url_for('toolbox') }}">Toolbox</a></li>
-                <li><a href="{{ url_for('certification') }}">Certifications</a></li>
-                <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('duty_of_care') }}"
+                    class="{% if request.path == url_for('duty_of_care') %}active{% endif %}">Duty Of Care</a></li>
+
+                <li><a href="{{ url_for('effective_efforts') }}"
+                    class="{% if request.path == url_for('effective_efforts') %}active{% endif %}">Effective Efforts</a></li>
+
+                <li><a href="{{ url_for('toolbox') }}"
+                    class="{% if request.path == url_for('toolbox') %}active{% endif %}">Toolbox</a></li>
+
+                <li><a href="{{ url_for('certification') }}"
+                    class="{% if request.path == url_for('certification') %}active{% endif %}">Certifications</a></li>
+
+                <li><a href="{{ url_for('aboutus') }}"
+                    class="{% if request.path == url_for('aboutus') %}active{% endif %}">About Us</a></li>
+            </ul>
+        </nav>
   </header>
 
 <header class="header"><h1>PFAS Toolbox</h1></header>

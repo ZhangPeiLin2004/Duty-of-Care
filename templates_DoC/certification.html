@@ -16,11 +16,20 @@
         </div>
         <nav>
             <ul>
-                <li><a href="{{ url_for('duty_of_care') }}">Duty Of Care</a></li>
-                <li><a href="{{ url_for('effective_efforts') }}">Effective Efforts</a></li>
-                <li><a href="{{ url_for('toolbox') }}">Toolbox</a></li>
-                <li><a href="{{ url_for('certification') }}">Certifications</a></li>
-                <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+                <li><a href="{{ url_for('duty_of_care') }}"
+                    class="{% if request.path == url_for('duty_of_care') %}active{% endif %}">Duty Of Care</a></li>
+
+                <li><a href="{{ url_for('effective_efforts') }}"
+                    class="{% if request.path == url_for('effective_efforts') %}active{% endif %}">Effective Efforts</a></li>
+
+                <li><a href="{{ url_for('toolbox') }}"
+                    class="{% if request.path == url_for('toolbox') %}active{% endif %}">Toolbox</a></li>
+
+                <li><a href="{{ url_for('certification') }}"
+                    class="{% if request.path == url_for('certification') %}active{% endif %}">Certifications</a></li>
+
+                <li><a href="{{ url_for('aboutus') }}"
+                    class="{% if request.path == url_for('aboutus') %}active{% endif %}">About Us</a></li>
             </ul>
         </nav>
      </header>
@@ -121,9 +130,8 @@
             <div class="footer-logo-text">
                 <img src="../static_DoC/images_DoC/logo.png" alt="Duty of Care Logo" class="footer-logo">
                 <div class="footer-text">
-                    <p>Terms and Conditions</p>
-                    <p>Contact Us</p>
-                    <p>©2025 PFAS Trust</p>
+                    <p>Contact Us: +31 6 81231059</p>
+                    <p>PFAS Pioneers</p>
                 </div>
             </div>
         </div>
@@ -146,11 +154,17 @@
                 </ul>
             </div>
             <div class="footer-column">
-                <h3>Our Community</h3>
+                <h3>Certifications</h3>
                 <ul>
-                    <li><a href="#">Companies</a></li>
-                    <li><a href="#">Our mission</a></li>
-                    <li><a href="#">About us</a></li>
+                    <li><a href="{{ url_for('certifications') }}">Join</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Certified Contributors</a></li>
+                    <li><a href="#">Manual to join</a></li>
                 </ul>
             </div>
         </div>
