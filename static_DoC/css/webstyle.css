@@ -109,23 +109,31 @@ nav ul li a {
 }
 
 .hero-text p {
-    font-size: 22px;
+    font-size: 19px;
     margin-bottom: 20px;
 }
 
 .cta-button {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #31537d;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 15px;
-    transition: 0.3s;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;        /* same as .btn */
+  border-radius: 1.5rem;          /* same rounded corners as .btn */
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  background-color: #2e4f7b;      /* same as .btn-primary */
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .cta-button:hover {
-    background-color: #00e1ff;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  background-color: #2e4f7b;  /* keep original color or remove to keep same */
+}
+
+.cta-button:active {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 
@@ -194,7 +202,7 @@ nav ul li a {
 }
 
 .info-description {
-    font-size: 1rem;
+    font-size: 20px;
     color: #333;
     line-height: 1.5;
     font-weight: 500;
@@ -222,13 +230,26 @@ nav ul li a {
 /* Effectivefforts Joana Caseiro */
 /*#############################################################################################*/
 .section-title {
-    text-align: center; /* Center the text horizontally */
-    font-size: 2rem;    /* Adjust the font size */
-    font-weight: bold;  /* Make the title bold */
-    margin-bottom: 20px; /* Space between the title and the rest of the content */
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
     color: #31537d;
 }
 
+.section-description {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 25px;
+    color: #333333;
+    max-width: 700px;
+    line-height: 1.4;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .highlights {
     display: flex;
@@ -254,7 +275,7 @@ nav ul li a {
     display: flex;
     align-items: center;
     padding: 15px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s;
@@ -331,20 +352,28 @@ nav ul li a {
 
 
 .find-out-more {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #31537d; /* Green like the arrow */
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
-    position: relative;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 0.75rem 1.5rem; 
+  background-color: #2e4f7b;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  text-align: center;
 }
 
 .find-out-more:hover {
-    background-color: #31537d;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  background-color: #2e4f7b;
+}
+
+.find-out-more:active {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 
@@ -384,7 +413,7 @@ nav ul li a {
 
 /* Quote Text */
 .quote-text {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
     color: #333;
     font-style: italic;
@@ -417,7 +446,8 @@ nav ul li a {
 }
 
 .Certification h1 {
-    font-size: 2.5em;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', sans-serif;
     color: #31537d;
     text-align: center;
 }
@@ -498,34 +528,44 @@ nav ul li a {
     margin: auto;
 }
 
-.text-content {
-    max-width: 500px;
-}
-
 .text-content h2 {
-    font-size: 2em;
-    color: #24436E;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #31537d;
 }
 
 .text-content p {
-    font-size: 1em;
+    font-size: 20px;
     color: #3A4F6D;
 }
 
 .toolbox-btn {
-    background-color: #24436E;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 20px;
-    font-size: 1em;
-    cursor: pointer;
-    margin-top: 15px;
+  display: inline-block;
+  background-color: #2e4f7b;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .toolbox-btn:hover {
-    background-color: #00e1ff;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  background-color: #2e4f7b;
 }
+
+.toolbox-btn:active {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
 
 .image-content img {
     width: 400px; /* Adjust based on actual image size */
