@@ -104,12 +104,12 @@ nav ul li a {
 }
 
 .hero-text h1 {
-    font-size: 36px;
+    font-size: 50px;
     margin-bottom: 15px;
 }
 
 .hero-text p {
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 20px;
 }
 
@@ -544,19 +544,19 @@ footer {
 .footer-container {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
     max-width: 1200px;
     margin: auto;
 }
 
-/* Left section: Logo and text */
 .footer-left {
     max-width: 250px;
 }
 
 .footer-logo {
-    width: 90px; /* Adjust as needed */
-    margin-bottom: 10px;
+    width: 90px;
+    margin-top: 0px;
+    display: block;
 }
 
 .footer-left p {
@@ -567,8 +567,8 @@ footer {
 
 .footer-logo-text {
     display: flex;
-    align-items: center;
-    gap: 15px; /* spacing between logo and text */
+    align-items: flex-start;
+    gap: 15px;
 }
 
 .footer-text p {
