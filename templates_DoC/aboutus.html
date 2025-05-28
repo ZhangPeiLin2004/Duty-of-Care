@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../static_DoC/css/our_community.css">
     <link rel="stylesheet" href="../static_DoC/css/webstyle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
      <header>
@@ -65,63 +66,55 @@
         </section>
 
                 
-        <section class="section">
-        <div class="section-container swiper-section">
-            <h2 class="section-heading">Cooperating Companies</h2>
-            <div class="swiper-wrapper-container">
-            <div class="swiper-container swiper-companies">
-                <div class="swiper-wrapper">
-                <!-- 8 logos, change to 4, 8, or 12, etc. -->
-                <div class="swiper-slide"><div class="logo-circle" title="Company A"></div></div>
-                <div class="swiper-slide"><div class="logo-circle" title="Company B"></div></div>
-                <div class="swiper-slide"><div class="logo-circle" title="Company C"></div></div>
-                <div class="swiper-slide"><div class="logo-circle" title="Company D"></div></div>
-                <div class="swiper-slide"><div class="logo-circle" title="Company E"></div></div>
-                <div class="swiper-slide"><div class="logo-circle" title="Company F"></div></div>
-                <div class="swiper-slide"><div class="logo-circle" title="Company G"></div></div>
-                <div class="swiper-slide"><div class="logo-circle" title="Company H"></div></div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </section>
+<!-- ################################################################################################################-->
+<!-- Cooperating Companies -->
+<!-- ############################################################################################################### -->
+<section class="logo-carousel">
+  <h2 class="section-title">Cooperating Companies</h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <!-- Repeat or loop over logos -->
+      {% for i in range(8) %}
+      <div class="swiper-slide">
+        <img src="../static_DoC/images_DoC/significant_advancement.webp" alt="Company Logo" />
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
+<script>
+  const swiper = new Swiper('.mySwiper', {
+    slidesPerView: 4,
+    slidesPerGroup: 4,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    speed: 600,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        slidesPerGroup: 1
+      },
+      640: {
+        slidesPerView: 2,
+        slidesPerGroup: 2
+      },
+      1024: {
+        slidesPerView: 4,
+        slidesPerGroup: 4
+      }
+    }
+  });
+</script>
 
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script>
-            var swiper = new Swiper(".swiper-companies", {
-                slidesPerView: 4,
-                slidesPerGroup: 4,
-                spaceBetween: 30,
-                loop: false,
-                rewind: false,
-                autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-                },
-                navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-                },
-                breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                    slidesPerGroup: 1,
-                    spaceBetween: 10,
-                },
-                640: {
-                    slidesPerView: 2,
-                    slidesPerGroup: 2,
-                    spaceBetween: 20,
-                },
-                1024: {
-                    slidesPerView: 4,
-                    slidesPerGroup: 4,
-                    spaceBetween: 30,
-                }
-                }
-            });
-        </script>
 </body>
 
 <!-- ################################################################################################################-->
