@@ -32,7 +32,7 @@ header {
   margin-top: 80px;
 }
 
-.logo img { height: 40px; }
+.logo img { height: 80px; }
 nav { flex-grow: 1; display: flex; justify-content: flex-end; }
 nav ul { list-style: none; display: flex; align-items: center; margin: 0; padding-right: 30mm; }
 nav ul li { margin: 0 15px; }
