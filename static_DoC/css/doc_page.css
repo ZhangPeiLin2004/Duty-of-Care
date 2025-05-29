@@ -125,6 +125,7 @@
 
   .section h2 {
     color: #274C77;
+    margin-top: 20px;
   }
   .section h3 {
     color: #274C77;
@@ -412,30 +413,35 @@
 /*#############################################################################################*/
 /* Join us button */
 /*#############################################################################################*/
-.toolbox-btn {
-  align-self: center;
-  display: inline-block;
-  background-color: #2e4f7b;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 1.5rem;
-  font-size: 1em;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 15px;
+.join-btn-container {
   text-align: center;
+  margin: 50px 0;
+}
+
+.join-btn {
+  display: inline-block;
+  background-color: #24436E; /* darker blue */
+  color: white;
+  padding: 1.5rem 3rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 2rem; /* much bigger */
+  font-weight: 900;
+  cursor: pointer;
   text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 12px rgba(36, 67, 110, 0.5);
+  user-select: none;
 }
 
-.toolbox-btn:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-  background-color: #2e4f7b;
+.join-btn:hover {
+  background-color: #1c3556;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(28, 53, 86, 0.6);
 }
 
-.toolbox-btn:active {
-  transform: translateY(-1px) scale(1.02);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.join-btn:active {
+  background-color: #162a43;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 12px rgba(22, 42, 67, 0.4);
 }

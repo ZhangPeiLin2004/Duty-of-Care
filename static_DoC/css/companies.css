@@ -22,16 +22,27 @@ main {padding: 20px;
 
 h1 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 h4 {
+  width: 90%;
+  margin: 0 auto 20px auto; /* centered */
   text-align: center;
 }
 
 #filters {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+  width: 90%;
+  margin: 0 auto 20px auto;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+#tech-filter {
+  width: 300px;
+  margin: 0;
+  display: block;
 }
 
 .filter-category {
@@ -48,19 +59,17 @@ h4 {
     margin-top: 20px;
   }
 
-  .page-title h1 {
-    margin: 0;
+.page-title h1 {
+    margin: 0 0 20px 0;  /* top:0, right:0, bottom:20px, left:0 */
     font-size: 2.5rem;
     color: #24436E;
     font-weight: bold;
-  }
-  #filters {
-    text-align: center;
-    margin: 20px;
-  }
+}
 
 table {
-    width: 100%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
     border-collapse: collapse;
     background-color: white;
 }
@@ -83,9 +92,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
-#tech-filter {
-    width: 300px;
-}
+
 td ul {
     padding-left: 20px;
     margin: 0;
@@ -93,6 +100,15 @@ td ul {
 td ul li {
     list-style-type: disc;
 }
+
+h6 {
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
 
 footer {
     background-color: #24436E;

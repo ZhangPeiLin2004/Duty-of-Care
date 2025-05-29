@@ -126,6 +126,7 @@
     font-size: 0.9em;
     color: #777;
     margin-top: -5px;
+    padding: 1.2rem 0;
 }
 
 .comment-likes {
@@ -133,17 +134,19 @@
 }
 
 .comment-reply-textarea {
-    flex-grow: 0;
-    width: 60%;
-    height: 1.8em;
-    resize: none;
-    margin-right: 15px;
-    font-size: 0.8em;
+    width: 100%;
+    min-height: 3em;
+    resize: vertical;
+    font-size: 0.9em;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
+    border-radius: 8px;
+    padding: 0.6em;
     background-color: #fff;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
+
+
 
 .leave-comment {
     display: flex;
