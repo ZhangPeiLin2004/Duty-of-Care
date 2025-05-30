@@ -157,6 +157,7 @@
   });
 </script>
 </body>
+
 <!-- ################################################################################################################-->
 <!-- End-of-Page Section -->
 <!-- ############################################################################################################### -->
@@ -186,22 +187,24 @@
             <div class="footer-column">
                 <h3>Toolbox</h3>
                 <ul>
-                    <li><a href="{{ url_for('toolbox') }}">PFAS alternatives</a></li>
-                    <li><a href="{{ url_for('toolbox') }}">PFAS removal technologies</a></li>
+                    <li><a href="{{ url_for('dt_index') }}">PFAS alternatives</a></li>
+                    <li><a href="{{ url_for('companies') }}">PFAS Cleanup</a></li>
+                    <li><a href="{{ url_for('duty_of_care') }}#decision">Self Check</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h3>Certifications</h3>
                 <ul>
-                    <li><a href="{{ url_for('certification') }}">Join</a></li>
+                    <li><a href="{{ url_for('certification') }}#pioneers">Certified Contributors</a></li>
+                    <li><a href="{{ url_for('certification') }}#manual">Manual</a></li>
+                    <li><a href="{{ url_for('certification') }}#join">Join</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h3>About Us</h3>
                 <ul>
-                    <li><a href="#">Join</a></li>
-                    <li><a href="#">Certified Contributors</a></li>
-                    <li><a href="#">Manual to join</a></li>
+                    <li><a href="{{ url_for('aboutus') }}#about-us">About Us</a></li>
+                    <li><a href="{{ url_for('aboutus') }}#mission">Our Mission</a></li>
                 </ul>
             </div>
         </div>
