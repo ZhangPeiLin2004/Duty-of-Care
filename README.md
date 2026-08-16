@@ -2,6 +2,7 @@
 
 
 Modularity and better Maintenance for html web pages
+```bash
 # root
 # │── templates_DoC
 # │   ├── index.html               (Home Page - contains main navigation bar)
@@ -21,7 +22,7 @@ Modularity and better Maintenance for html web pages
 # |   ├── data
 # │     ├── pfas.json
 # │     ├── functions.json
-
+```
 ## Getting Started
 Index.html: Landing Page
 
